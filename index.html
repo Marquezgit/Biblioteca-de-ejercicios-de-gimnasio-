@@ -382,9 +382,102 @@ background:black;
 
 </section>
 
+  <!-- HERRAMIENTAS -->
+
+<section class="section" id="herramientas">
+
+<h2>Herramientas</h2>
+
+<div class="tool">
+
+<h3>Calculadora de proteína</h3>
+
+<p>Ingresa tu peso corporal para calcular tu consumo diario recomendado.</p>
+
+<input type="number" id="peso" placeholder="Peso en kg">
+
+<button onclick="proteina()">Calcular</button>
+
+<p id="resultado"></p>
+
+</div>
+
+</section>
+
+  <!-- RUTINAS -->
+
+<section class="section" id="rutinas">
+
+<h2>Rutinas</h2>
+
+<div class="rutina">
+
+<h3>Principiante</h3>
+
+<p>
+Entrena 3 días por semana con ejercicios básicos:
+sentadilla, press de banca, dominadas y peso muerto.
+</p>
+
+</div>
+
+<div class="rutina">
+
+<h3>Intermedio</h3>
+
+<p>
+Entrena 4-5 días por semana con rutina
+Push Pull Legs.
+</p>
+
+</div>
+
+<div class="rutina">
+
+<h3>Avanzado</h3>
+
+<p>
+Entrena 5-6 días por semana con división por grupos musculares.
+</p>
+
+</div>
+
+</section>
+
+  <!-- CONTACTO -->
+
+<section class="section" id="contacto">
+
+<h2>Contacto</h2>
+
+<form>
+
+<input type="text" placeholder="Nombre">
+
+<input type="email" placeholder="Correo">
+
+<textarea placeholder="Mensaje"></textarea>
+
+<button type="submit">Enviar</button>
+
+</form>
+
+</section>
+
+  function proteina(){
+
+let peso=document.getElementById("peso").value
+
+let gramos=peso*2
+
+document.getElementById("resultado").innerText =
+"Debes consumir aproximadamente "+gramos+" gramos de proteína al día."
+
+}
+  
 <footer>
 
-Biblioteca Fitness
+Biblioteca Fitness - Pixel Forge Web Studio
 
 </footer>
 
