@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Biblioteca Fitness</title>
+<title>Biblioteca Fitness | Pixel Forge Studio</title>
 
 <style>
 
 body{
 margin:0;
-font-family:Arial;
-background:#111;
+font-family:Segoe UI;
+background:#0f0f0f;
 color:white;
 }
 
@@ -25,32 +24,30 @@ justify-content:space-between;
 align-items:center;
 padding:20px 40px;
 background:black;
-position:sticky;
-top:0;
-z-index:100;
+border-bottom:1px solid #222;
 }
 
 .logo{
-font-size:32px;
+font-size:22px;
 font-weight:bold;
+color:#ff3b3b;
 }
 
 nav a{
+margin-left:20px;
 color:white;
-margin-left:25px;
 text-decoration:none;
-font-size:16px;
 }
 
 nav a:hover{
-color:#FFD700;
+color:#ff3b3b;
 }
 
 /* HERO */
 
 .hero{
-height:65vh;
-background:url("https://images.unsplash.com/photo-1517838277536-f5f99be501cd") center/cover;
+height:60vh;
+background:url("https://images.unsplash.com/photo-1558611848-73f7eb4001ab") center/cover;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -58,10 +55,10 @@ text-align:center;
 }
 
 .hero h1{
-font-size:55px;
 background:rgba(0,0,0,0.6);
-padding:30px;
+padding:25px;
 border-radius:10px;
+font-size:40px;
 }
 
 /* SEARCH */
@@ -72,79 +69,78 @@ padding:30px;
 }
 
 .search input{
-padding:14px;
-width:350px;
+padding:12px;
+width:60%;
+max-width:400px;
 border-radius:6px;
 border:none;
-font-size:16px;
 }
 
 /* SECTIONS */
 
 .section{
-padding:40px;
+padding:60px 10%;
 }
 
-.section h2{
-color:#FFD700;
-margin-bottom:10px;
+h2{
+color:#ff3b3b;
 }
 
-/* NETFLIX STYLE ROW */
+/* CAROUSEL */
 
-.row{
+.carousel-container{
 position:relative;
 }
 
-.rowTitle{
+.row{
 display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.muscleEN{
-font-size:22px;
-color:#FFD700;
-opacity:0.5;
-}
-
-.rowPosters{
-display:flex;
+gap:18px;
 overflow-x:auto;
-gap:12px;
-padding:20px 0;
+scroll-behavior:smooth;
 }
-
-.rowPosters::-webkit-scrollbar{
-display:none;
-}
-
-/* CARD */
 
 .card{
-min-width:240px;
-background:#1c1c1c;
+min-width:230px;
+background:#1a1a1a;
 border-radius:10px;
 cursor:pointer;
 transition:0.3s;
+box-shadow:0 0 10px rgba(0,0,0,0.6);
 }
 
 .card img{
 width:100%;
-height:140px;
+height:130px;
 object-fit:cover;
 border-radius:10px 10px 0 0;
 }
 
 .card h4{
-margin:10px;
+margin:12px;
 }
 
 .card:hover{
-transform:scale(1.1);
+transform:scale(1.08);
+box-shadow:0 0 15px rgba(255,60,60,0.6);
 }
 
-/* MODAL VIDEO */
+/* CAROUSEL BUTTONS */
+
+.arrow{
+position:absolute;
+top:40%;
+background:#ff3b3b;
+border:none;
+color:white;
+font-size:22px;
+padding:10px;
+cursor:pointer;
+}
+
+.left{left:-10px}
+.right{right:-10px}
+
+/* VIDEO MODAL */
 
 .modal{
 display:none;
@@ -165,81 +161,89 @@ height:70%;
 
 .close{
 position:absolute;
-top:30px;
+top:20px;
 right:40px;
-font-size:35px;
+font-size:30px;
 cursor:pointer;
 }
 
-/* TOOLS */
+/* FITNESS TOOLS */
 
-.tool{
-background:#1c1c1c;
-padding:25px;
+.tool-box{
+background:#1a1a1a;
+padding:30px;
 border-radius:10px;
-margin-bottom:20px;
-max-width:400px;
+margin-top:30px;
 }
 
 button{
-background:#FFD700;
+background:#ff3b3b;
 border:none;
 padding:12px 20px;
+color:white;
 border-radius:6px;
 cursor:pointer;
 }
 
-/* ROUTINES */
-
-.rutina{
-background:#1c1c1c;
-padding:20px;
-border-radius:10px;
-margin-bottom:15px;
+button:hover{
+background:#ff0000;
 }
 
-/* PROMO */
+/* CTA */
 
-.webpromo{
-background:#161616;
+.cta{
 text-align:center;
-padding:60px 20px;
+background:#161616;
+padding:60px;
 }
 
-.webpromo h2{
-color:white;
+.cta h2{
+margin-bottom:20px;
 }
 
-.whatsapp{
-background:#25D366;
-color:white;
-font-size:18px;
-padding:14px 25px;
+/* FORM */
+
+form{
+max-width:400px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+input,textarea,select{
+padding:10px;
+border-radius:6px;
+border:none;
 }
 
 /* FOOTER */
 
 footer{
 text-align:center;
-padding:20px;
+padding:25px;
 background:black;
+margin-top:40px;
+}
+
+footer span{
+color:#ff3b3b;
+font-weight:bold;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
 
-<div class="logo">Biblioteca Fitness</div>
+<div class="logo">Pixel Forge Studio</div>
 
 <nav>
 
 <a href="#ejercicios">Ejercicios</a>
 <a href="#herramientas">Herramientas</a>
-<a href="#rutinas">Rutinas</a>
 <a href="#contacto">Contacto</a>
 
 </nav>
@@ -248,32 +252,29 @@ background:black;
 
 <section class="hero">
 
-<h1>Haz que tu entrenamiento sea la clave de tu éxito</h1>
+<h1>Biblioteca Profesional de Ejercicios</h1>
 
 </section>
 
 <div class="search">
 
-<input id="buscador" placeholder="🔍 Buscar músculo (pecho, espalda...)">
+<input id="buscador" placeholder="Buscar músculo o ejercicio">
 
 </div>
 
 <section class="section" id="ejercicios">
 
-<!-- PECHO -->
+<h2 id="pecho">Pecho</h2>
+
+<div class="carousel-container">
+
+<button class="arrow left" onclick="scrollRow(this,-300)">❮</button>
 
 <div class="row">
 
-<div class="rowTitle">
-<h2 id="pecho">Pecho</h2>
-<div class="muscleEN">CHEST</div>
-</div>
-
-<div class="rowPosters">
-
 <div class="card" onclick="playVideo('gRVjAtPip0Y')">
 <img src="https://img.youtube.com/vi/gRVjAtPip0Y/0.jpg">
-<h4>Press banca</h4>
+<h4>Press de banca</h4>
 </div>
 
 <div class="card" onclick="playVideo('VmB1G1K7v94')">
@@ -292,18 +293,14 @@ background:black;
 </div>
 
 </div>
+
+<button class="arrow right" onclick="scrollRow(this,300)">❯</button>
+
 </div>
 
-<!-- ESPALDA -->
+<h2 id="espalda">Espalda</h2>
 
 <div class="row">
-
-<div class="rowTitle">
-<h2 id="espalda">Espalda</h2>
-<div class="muscleEN">BACK</div>
-</div>
-
-<div class="rowPosters">
 
 <div class="card" onclick="playVideo('eGo4IYlbE5g')">
 <img src="https://img.youtube.com/vi/eGo4IYlbE5g/0.jpg">
@@ -312,89 +309,93 @@ background:black;
 
 <div class="card" onclick="playVideo('roCP6wCXPqo')">
 <img src="https://img.youtube.com/vi/roCP6wCXPqo/0.jpg">
-<h4>Remo barra</h4>
+<h4>Remo con barra</h4>
 </div>
 
 <div class="card" onclick="playVideo('vT2GjY_Umpw')">
 <img src="https://img.youtube.com/vi/vT2GjY_Umpw/0.jpg">
-<h4>Jalón pecho</h4>
+<h4>Jalón al pecho</h4>
 </div>
 
+<div class="card" onclick="playVideo('pYcpY20QaE8')">
+<img src="https://img.youtube.com/vi/pYcpY20QaE8/0.jpg">
+<h4>Remo mancuerna</h4>
 </div>
+
 </div>
 
 </section>
 
 <section class="section" id="herramientas">
 
-<h2>Herramientas</h2>
+<h2>Herramientas Fitness</h2>
 
-<div class="tool">
+<div class="tool-box">
 
-<h3>Calculadora de proteína</h3>
+<h3>Generador de Rutina</h3>
 
-<input type="number" id="peso" placeholder="Peso en kg">
+<select id="objetivo">
+
+<option value="">Selecciona objetivo</option>
+<option value="hipertrofia">Hipertrofia</option>
+<option value="fuerza">Fuerza</option>
+<option value="principiante">Principiante</option>
+
+</select>
+
+<button onclick="generarRutina()">Generar</button>
+
+<p id="rutina"></p>
+
+</div>
+
+<div class="tool-box">
+
+<h3>Calculadora de Proteína</h3>
+
+<input type="number" id="peso" placeholder="Tu peso en kg">
 
 <button onclick="proteina()">Calcular</button>
 
-<p id="resultado"></p>
+<p id="resultadoProteina"></p>
 
 </div>
 
 </section>
 
-<section class="section" id="rutinas">
+<section class="cta">
 
-<h2>Rutinas</h2>
+<h2>¿Necesitas una página web profesional?</h2>
 
-<div class="rutina">
-<h3>Principiantes</h3>
-<p>3 días por semana, rutina Full Body.</p>
-</div>
+<p>Pixel Forge Studio diseña páginas modernas optimizadas para ventas.</p>
 
-<div class="rutina">
-<h3>Intermedios</h3>
-<p>4-5 días por semana, Push Pull Legs.</p>
-</div>
-
-<div class="rutina">
-<h3>Avanzados</h3>
-<p>5-6 días por semana, división por músculo.</p>
-</div>
-
-</section>
-
-<section class="webpromo" id="contacto">
-
-<h2>¿Quieres una página web profesional como esta?</h2>
-
-<form>
-
-<input placeholder="Nombre"><br><br>
-<input placeholder="Correo"><br><br>
-<textarea placeholder="Cuéntanos sobre tu proyecto"></textarea><br><br>
-
-<button>Enviar</button>
-
-</form>
-
-<br>
-
-<a href="https://wa.me/528714042067">
-
-<button class="whatsapp">
-
-Contactar por WhatsApp
-
+<button onclick="document.getElementById('contacto').scrollIntoView()">
+Solicitar página web
 </button>
 
-</a>
+</section>
+
+<section class="section" id="contacto">
+
+<h2>Contacto</h2>
+
+<form action="https://formsubmit.co/Gus.marquez2024@gmail.com" method="POST">
+
+<input type="text" name="nombre" placeholder="Nombre" required>
+
+<input type="email" name="correo" placeholder="Correo" required>
+
+<textarea name="mensaje" placeholder="Mensaje"></textarea>
+
+<button type="submit">Enviar</button>
+
+</form>
 
 </section>
 
 <footer>
 
-Biblioteca Fitness
+Diseñado por <span>Pixel Forge Studio</span> | Desarrollo Web Profesional
 
 </footer>
 
@@ -402,7 +403,7 @@ Biblioteca Fitness
 
 <span class="close" onclick="closeVideo()">✖</span>
 
-<iframe id="player" frameborder="0" allowfullscreen></iframe>
+<iframe id="videoPlayer" frameborder="0" allowfullscreen></iframe>
 
 </div>
 
@@ -411,14 +412,55 @@ Biblioteca Fitness
 function playVideo(id){
 
 document.getElementById("modal").style.display="flex"
-document.getElementById("player").src="https://www.youtube.com/embed/"+id
+document.getElementById("videoPlayer").src="https://www.youtube.com/embed/"+id
 
 }
 
 function closeVideo(){
 
 document.getElementById("modal").style.display="none"
-document.getElementById("player").src=""
+document.getElementById("videoPlayer").src=""
+
+}
+
+function scrollRow(btn,amount){
+
+btn.parentElement.querySelector(".row").scrollBy({
+left:amount,
+behavior:"smooth"
+})
+
+}
+
+document.getElementById("buscador").addEventListener("keypress",function(e){
+
+if(e.key==="Enter"){
+
+let t=this.value.toLowerCase()
+
+if(t.includes("pecho")) location="#pecho"
+if(t.includes("espalda")) location="#espalda"
+if(t.includes("abdomen")) location="#abdomen"
+if(t.includes("biceps")) location="#biceps"
+if(t.includes("triceps")) location="#triceps"
+
+}
+
+})
+
+function generarRutina(){
+
+let obj=document.getElementById("objetivo").value
+let r=document.getElementById("rutina")
+
+if(obj=="hipertrofia")
+r.innerText="Día 1 Pecho/Tríceps | Día 2 Espalda/Bíceps | Día 3 Pierna | Día 4 Hombros"
+
+if(obj=="fuerza")
+r.innerText="Rutina 5x5 con sentadilla, press banca y peso muerto"
+
+if(obj=="principiante")
+r.innerText="Rutina Full Body 3 días por semana"
 
 }
 
@@ -428,31 +470,10 @@ let peso=document.getElementById("peso").value
 
 let gramos=peso*2
 
-document.getElementById("resultado").innerText=
-"Debes consumir aproximadamente "+gramos+"g de proteína diaria."
+document.getElementById("resultadoProteina").innerText=
+"Debes consumir aproximadamente "+gramos+"g de proteína diaria"
 
 }
-
-document.getElementById("buscador").addEventListener("keypress",function(e){
-
-if(e.key==="Enter"){
-
-let valor=this.value.toLowerCase()
-
-let mapa={
-pecho:"pecho",
-espalda:"espalda"
-}
-
-if(mapa[valor]){
-
-document.getElementById(mapa[valor]).scrollIntoView({behavior:"smooth"})
-
-}
-
-}
-
-})
 
 </script>
 
