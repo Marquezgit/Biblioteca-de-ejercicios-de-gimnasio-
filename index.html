@@ -463,17 +463,6 @@ Entrena 5-6 días por semana con división por grupos musculares.
 </form>
 
 </section>
-
-  function proteina(){
-
-let peso=document.getElementById("peso").value
-
-let gramos=peso*2
-
-document.getElementById("resultado").innerText =
-"Debes consumir aproximadamente "+gramos+" gramos de proteína al día."
-
-}
   
 <footer>
 
@@ -504,6 +493,16 @@ function closeVideo(){
 document.getElementById("modal").style.display="none"
 document.getElementById("player").src=""
 }
+  function proteina(){
+
+let peso=document.getElementById("peso").value
+
+let gramos=peso*2
+
+document.getElementById("resultado").innerText =
+"Debes consumir aproximadamente "+gramos+" gramos de proteína al día."
+
+  }
 
 document.getElementById("buscador").addEventListener("keypress",function(e){
 
