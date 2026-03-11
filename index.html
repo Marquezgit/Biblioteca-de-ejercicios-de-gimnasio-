@@ -47,7 +47,7 @@ text-align:center;
 background:rgba(0,0,0,0.6);
 padding:25px;
 border-radius:10px;
-font-size:40px;
+font-size:38px;
 }
 
 .search{
@@ -171,10 +171,6 @@ margin-top:40px;
 font-size:28px;
 }
 
-.webpromo p{
-margin-bottom:25px;
-}
-
 .whatsapp-btn{
 background:#25D366;
 font-size:18px;
@@ -209,20 +205,19 @@ background:black;
 
 <section class="hero">
 
-<h1>Biblioteca de Ejercicios de Gimnasio</h1>
+<h1>Haz que tu entrenamiento sea la clave de tu éxito</h1>
 
 </section>
 
 <div class="search">
 
-<input id="buscador" placeholder="Buscar músculo (pecho, espalda, abdomen...)">
+<input placeholder="Buscar músculo (pecho, espalda, abdomen...)">
 
 </div>
 
 <section class="section" id="ejercicios">
 
-<h2 id="pecho">Pecho</h2>
-
+<h2>Pecho</h2>
 <div class="carousel">
 
 <div class="card" onclick="playVideo('gRVjAtPip0Y')">
@@ -247,8 +242,7 @@ background:black;
 
 </div>
 
-<h2 id="espalda">Espalda</h2>
-
+<h2>Espalda</h2>
 <div class="carousel">
 
 <div class="card" onclick="playVideo('eGo4IYlbE5g')">
@@ -273,60 +267,130 @@ background:black;
 
 </div>
 
-</section>
+<h2>Hombros</h2>
+<div class="carousel">
 
-<section class="section" id="herramientas">
+<div class="card" onclick="playVideo('B-aVuyhvLHU')">
+<img src="https://img.youtube.com/vi/B-aVuyhvLHU/0.jpg">
+<h4>Press militar</h4>
+</div>
 
-<h2>Herramientas Fitness</h2>
+<div class="card" onclick="playVideo('3VcKaXpzqRo')">
+<img src="https://img.youtube.com/vi/3VcKaXpzqRo/0.jpg">
+<h4>Elevaciones laterales</h4>
+</div>
 
-<div class="tool">
+<div class="card" onclick="playVideo('qEwKCR5JCog')">
+<img src="https://img.youtube.com/vi/qEwKCR5JCog/0.jpg">
+<h4>Elevaciones frontales</h4>
+</div>
 
-<h3>Generador de Rutina</h3>
-
-<select id="objetivo">
-
-<option value="">Selecciona objetivo</option>
-<option value="hipertrofia">Hipertrofia</option>
-<option value="fuerza">Fuerza</option>
-<option value="principiante">Principiante</option>
-
-</select>
-
-<button onclick="generarRutina()">Generar</button>
-
-<p id="rutina"></p>
+<div class="card" onclick="playVideo('pXH2vH5Oe8E')">
+<img src="https://img.youtube.com/vi/pXH2vH5Oe8E/0.jpg">
+<h4>Pájaros</h4>
+</div>
 
 </div>
 
-<div class="tool">
+<h2>Bíceps</h2>
+<div class="carousel">
 
-<h3>Calculadora de Proteína</h3>
+<div class="card" onclick="playVideo('ykJmrZ5v0Oo')">
+<img src="https://img.youtube.com/vi/ykJmrZ5v0Oo/0.jpg">
+<h4>Curl con barra</h4>
+</div>
 
-<input type="number" id="peso" placeholder="Tu peso en kg">
+<div class="card" onclick="playVideo('kwG2ipFRgfo')">
+<img src="https://img.youtube.com/vi/kwG2ipFRgfo/0.jpg">
+<h4>Curl alterno</h4>
+</div>
 
-<button onclick="proteina()">Calcular</button>
+<div class="card" onclick="playVideo('av7-8igSXTs')">
+<img src="https://img.youtube.com/vi/av7-8igSXTs/0.jpg">
+<h4>Curl martillo</h4>
+</div>
 
-<p id="resultadoProteina"></p>
+<div class="card" onclick="playVideo('ykJmrZ5v0Oo')">
+<img src="https://img.youtube.com/vi/ykJmrZ5v0Oo/0.jpg">
+<h4>Curl concentrado</h4>
+</div>
 
 </div>
 
-</section>
+<h2>Tríceps</h2>
+<div class="carousel">
 
-<section class="section" id="contacto">
+<div class="card" onclick="playVideo('2-LAMcpzODU')">
+<img src="https://img.youtube.com/vi/2-LAMcpzODU/0.jpg">
+<h4>Extensión tríceps</h4>
+</div>
 
-<h2>Contacto</h2>
+<div class="card" onclick="playVideo('6SS6K3lAwZ8')">
+<img src="https://img.youtube.com/vi/6SS6K3lAwZ8/0.jpg">
+<h4>Fondos en banca</h4>
+</div>
 
-<form action="https://formsubmit.co/Gus.marquez2024@gmail.com" method="POST">
+<div class="card" onclick="playVideo('nRiJVZDpdL0')">
+<img src="https://img.youtube.com/vi/nRiJVZDpdL0/0.jpg">
+<h4>Patada de tríceps</h4>
+</div>
 
-<input type="text" name="nombre" placeholder="Nombre">
+<div class="card" onclick="playVideo('vB5OHsJ3EME')">
+<img src="https://img.youtube.com/vi/vB5OHsJ3EME/0.jpg">
+<h4>Press cerrado</h4>
+</div>
 
-<input type="email" name="correo" placeholder="Correo">
+</div>
 
-<textarea name="mensaje" placeholder="Mensaje"></textarea>
+<h2>Glúteos</h2>
+<div class="carousel">
 
-<button type="submit">Enviar</button>
+<div class="card" onclick="playVideo('LM8XHLYJoYs')">
+<img src="https://img.youtube.com/vi/LM8XHLYJoYs/0.jpg">
+<h4>Hip Thrust</h4>
+</div>
 
-</form>
+<div class="card" onclick="playVideo('QOVaHwm-Q6U')">
+<img src="https://img.youtube.com/vi/QOVaHwm-Q6U/0.jpg">
+<h4>Zancadas</h4>
+</div>
+
+<div class="card" onclick="playVideo('aclHkVaku9U')">
+<img src="https://img.youtube.com/vi/aclHkVaku9U/0.jpg">
+<h4>Sentadilla</h4>
+</div>
+
+<div class="card" onclick="playVideo('YyvSfVjQeL0')">
+<img src="https://img.youtube.com/vi/YyvSfVjQeL0/0.jpg">
+<h4>Prensa</h4>
+</div>
+
+</div>
+
+<h2>Abdomen</h2>
+<div class="carousel">
+
+<div class="card" onclick="playVideo('1fbU_MkV7NE')">
+<img src="https://img.youtube.com/vi/1fbU_MkV7NE/0.jpg">
+<h4>Crunch</h4>
+</div>
+
+<div class="card" onclick="playVideo('pSHjTRCQxIw')">
+<img src="https://img.youtube.com/vi/pSHjTRCQxIw/0.jpg">
+<h4>Elevación piernas</h4>
+</div>
+
+<div class="card" onclick="playVideo('ASdvN_XEl_c')">
+<img src="https://img.youtube.com/vi/ASdvN_XEl_c/0.jpg">
+<h4>Plancha</h4>
+</div>
+
+<div class="card" onclick="playVideo('JB2oyawG9KI')">
+<img src="https://img.youtube.com/vi/JB2oyawG9KI/0.jpg">
+<h4>Bicicleta</h4>
+</div>
+
+</div>
 
 </section>
 
@@ -334,8 +398,7 @@ background:black;
 
 <h2>¿Quieres una página web profesional como esta?</h2>
 
-<p>Diseñada por <b>Pixel Forge Studio</b><br>
-Creamos páginas modernas para negocios.</p>
+<p>Diseñada por <b>Pixel Forge Studio</b></p>
 
 <a href="https://wa.me/528714042067">
 
@@ -368,7 +431,6 @@ Biblioteca Fitness
 function playVideo(id){
 
 document.getElementById("modal").style.display="flex"
-
 document.getElementById("player").src="https://www.youtube.com/embed/"+id
 
 }
@@ -376,37 +438,7 @@ document.getElementById("player").src="https://www.youtube.com/embed/"+id
 function closeVideo(){
 
 document.getElementById("modal").style.display="none"
-
 document.getElementById("player").src=""
-
-}
-
-function generarRutina(){
-
-let obj=document.getElementById("objetivo").value
-
-let r=document.getElementById("rutina")
-
-if(obj==="hipertrofia")
-r.innerText="Pecho / Tríceps - Espalda / Bíceps - Pierna - Hombros"
-
-if(obj==="fuerza")
-r.innerText="Sentadilla, Press Banca y Peso Muerto (5x5)"
-
-if(obj==="principiante")
-r.innerText="Full Body 3 días por semana"
-
-}
-
-function proteina(){
-
-let peso=document.getElementById("peso").value
-
-let gramos=peso*2
-
-document.getElementById("resultadoProteina").innerText=
-
-"Debes consumir aproximadamente "+gramos+"g de proteína diaria"
 
 }
 
