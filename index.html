@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Fitness Streaming | Biblioteca de Ejercicios</title>
+<title>Biblioteca de Ejercicios</title>
 
 <style>
 
@@ -16,8 +15,6 @@ font-family:Arial;
 background:#111;
 color:white;
 }
-
-/* HEADER */
 
 header{
 display:flex;
@@ -46,8 +43,6 @@ nav a:hover{
 color:red;
 }
 
-/* HERO */
-
 .hero{
 height:60vh;
 background:url("https://images.unsplash.com/photo-1517838277536-f5f99be501cd") center/cover;
@@ -57,22 +52,12 @@ padding-left:60px;
 }
 
 .hero h1{
-font-size:42px;
-max-width:500px;
+font-size:40px;
 }
 
-.hero button{
-margin-top:20px;
-padding:12px 20px;
-background:red;
-border:none;
-color:white;
-font-size:16px;
-cursor:pointer;
-border-radius:5px;
+.section{
+padding:40px;
 }
-
-/* SEARCH */
 
 .search{
 text-align:center;
@@ -87,44 +72,11 @@ border:none;
 border-radius:5px;
 }
 
-/* FILTERS */
-
-.filters{
-text-align:center;
-margin-bottom:20px;
-}
-
-.filters button{
-padding:10px 15px;
-margin:5px;
-background:#222;
-color:white;
-border:none;
-border-radius:5px;
-cursor:pointer;
-}
-
-.filters button:hover{
-background:red;
-}
-
-/* SECTION */
-
-.section{
-padding:30px;
-}
-
 .row{
 display:flex;
 overflow-x:auto;
 gap:15px;
 }
-
-.row::-webkit-scrollbar{
-display:none;
-}
-
-/* CARD */
 
 .card{
 min-width:220px;
@@ -146,10 +98,7 @@ margin:10px;
 
 .card:hover{
 transform:scale(1.1);
-box-shadow:0 10px 20px rgba(0,0,0,0.7);
 }
-
-/* VIDEO MODAL */
 
 .modal{
 display:none;
@@ -161,12 +110,11 @@ height:100%;
 background:rgba(0,0,0,0.9);
 justify-content:center;
 align-items:center;
-z-index:200;
 }
 
 .modal iframe{
-width:90%;
-height:80%;
+width:80%;
+height:70%;
 }
 
 .close{
@@ -177,80 +125,10 @@ font-size:30px;
 cursor:pointer;
 }
 
-/* ROUTINES */
-
-.routines{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.routine{
-background:#1c1c1c;
-padding:20px;
-border-radius:10px;
-}
-
-/* TIPS */
-
-.tips{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-
-.tip{
-background:#1c1c1c;
-padding:20px;
-border-radius:10px;
-}
-
-/* PROGRESS */
-
-.progress{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-}
-
-.progressBox{
-background:#1c1c1c;
-padding:20px;
-border-radius:10px;
-text-align:center;
-}
-
-/* CONTACT */
-
-form{
-max-width:500px;
-margin:auto;
-display:flex;
-flex-direction:column;
-gap:10px;
-}
-
-input,textarea{
-padding:10px;
-border:none;
-border-radius:5px;
-}
-
-.send{
-background:red;
-color:white;
-border:none;
-padding:12px;
-cursor:pointer;
-}
-
-/* FOOTER */
-
 footer{
 background:black;
 text-align:center;
 padding:20px;
-margin-top:40px;
 }
 
 </style>
@@ -261,48 +139,31 @@ margin-top:40px;
 
 <header>
 
-<div class="logo">FITNESS STREAM</div>
+<div class="logo">Fitness Library</div>
 
 <nav>
 
-<a href="#">Inicio</a>
-<a href="#">Ejercicios</a>
-<a href="#">Rutinas</a>
-<a href="#">Consejos</a>
-<a href="#">Progreso</a>
-<a href="#">Contacto</a>
+<a href="#inicio">Inicio</a>
+<a href="#ejercicios">Ejercicios</a>
+<a href="#rutinas">Rutinas</a>
+<a href="#consejos">Consejos</a>
+<a href="#contacto">Contacto</a>
 
 </nav>
 
 </header>
 
 
-<section class="hero">
+<section class="hero" id="inicio">
 
-<div>
-
-<h1>Transforma tu cuerpo con entrenamiento inteligente</h1>
-
-<button onclick="scrollToExercises()">Explorar ejercicios</button>
-
-</div>
+<h1>Entrena inteligente y transforma tu cuerpo</h1>
 
 </section>
 
 
 <div class="search">
 
-<input type="text" id="searchInput" placeholder="Buscar ejercicio...">
-
-</div>
-
-
-<div class="filters">
-
-<button onclick="filterMuscle('all')">Todos</button>
-<button onclick="filterMuscle('pecho')">Pecho</button>
-<button onclick="filterMuscle('espalda')">Espalda</button>
-<button onclick="filterMuscle('piernas')">Piernas</button>
+<input type="text" id="searchInput" placeholder="Buscar ejercicio o músculo">
 
 </div>
 
@@ -313,14 +174,51 @@ margin-top:40px;
 
 <div class="row">
 
-<div class="card pecho" onclick="playVideo('gRVjAtPip0Y')">
+<div class="card" onclick="playVideo('gRVjAtPip0Y')">
 <img src="https://img.youtube.com/vi/gRVjAtPip0Y/0.jpg">
 <h4>Press de banca</h4>
 </div>
 
-<div class="card pecho" onclick="playVideo('VmB1G1K7v94')">
+<div class="card" onclick="playVideo('VmB1G1K7v94')">
 <img src="https://img.youtube.com/vi/VmB1G1K7v94/0.jpg">
 <h4>Aperturas con mancuernas</h4>
+</div>
+
+<div class="card" onclick="playVideo('IODxDxX7oi4')">
+<img src="https://img.youtube.com/vi/IODxDxX7oi4/0.jpg">
+<h4>Fondos</h4>
+</div>
+
+<div class="card" onclick="playVideo('DbFgADa2PL8')">
+<img src="https://img.youtube.com/vi/DbFgADa2PL8/0.jpg">
+<h4>Press inclinado</h4>
+</div>
+
+</div>
+
+
+<h2>Bíceps</h2>
+
+<div class="row">
+
+<div class="card" onclick="playVideo('ykJmrZ5v0Oo')">
+<img src="https://img.youtube.com/vi/ykJmrZ5v0Oo/0.jpg">
+<h4>Curl con barra</h4>
+</div>
+
+<div class="card" onclick="playVideo('kwG2ipFRgfo')">
+<img src="https://img.youtube.com/vi/kwG2ipFRgfo/0.jpg">
+<h4>Curl alterno</h4>
+</div>
+
+<div class="card" onclick="playVideo('av7-8igSXTs')">
+<img src="https://img.youtube.com/vi/av7-8igSXTs/0.jpg">
+<h4>Curl martillo</h4>
+</div>
+
+<div class="card" onclick="playVideo('ykJmrZ5v0Oo')">
+<img src="https://img.youtube.com/vi/ykJmrZ5v0Oo/0.jpg">
+<h4>Curl concentrado</h4>
 </div>
 
 </div>
@@ -330,64 +228,51 @@ margin-top:40px;
 
 <div class="row">
 
-<div class="card espalda" onclick="playVideo('eGo4IYlbE5g')">
+<div class="card" onclick="playVideo('eGo4IYlbE5g')">
 <img src="https://img.youtube.com/vi/eGo4IYlbE5g/0.jpg">
 <h4>Dominadas</h4>
 </div>
 
-<div class="card espalda" onclick="playVideo('roCP6wCXPqo')">
+<div class="card" onclick="playVideo('roCP6wCXPqo')">
 <img src="https://img.youtube.com/vi/roCP6wCXPqo/0.jpg">
 <h4>Remo con barra</h4>
 </div>
 
+<div class="card" onclick="playVideo('vT2GjY_Umpw')">
+<img src="https://img.youtube.com/vi/vT2GjY_Umpw/0.jpg">
+<h4>Pull down</h4>
 </div>
 
-</section>
-
-
-<section class="section">
-
-<h2>Rutinas de Entrenamiento</h2>
-
-<div class="routines">
-
-<div class="routine">
-<h3>Hipertrofia</h3>
-<p>Lunes: Pecho</p>
-<p>Miércoles: Espalda</p>
-<p>Viernes: Piernas</p>
-</div>
-
-<div class="routine">
-<h3>Principiantes</h3>
-<p>Full body</p>
-<p>3 días por semana</p>
+<div class="card" onclick="playVideo('pYcpY20QaE8')">
+<img src="https://img.youtube.com/vi/pYcpY20QaE8/0.jpg">
+<h4>Remo mancuerna</h4>
 </div>
 
 </div>
 
-</section>
 
+<h2>Tren inferior</h2>
 
-<section class="section">
+<div class="row">
 
-<h2>Consejos Fitness</h2>
-
-<div class="tips">
-
-<div class="tip">
-<h4>Descanso</h4>
-<p>El músculo crece durante la recuperación.</p>
+<div class="card" onclick="playVideo('aclHkVaku9U')">
+<img src="https://img.youtube.com/vi/aclHkVaku9U/0.jpg">
+<h4>Sentadilla</h4>
 </div>
 
-<div class="tip">
-<h4>Proteína</h4>
-<p>Consume proteína suficiente.</p>
+<div class="card" onclick="playVideo('IZxyjW7MPJQ')">
+<img src="https://img.youtube.com/vi/IZxyjW7MPJQ/0.jpg">
+<h4>Peso muerto</h4>
 </div>
 
-<div class="tip">
-<h4>Técnica</h4>
-<p>La técnica correcta evita lesiones.</p>
+<div class="card" onclick="playVideo('YyvSfVjQeL0')">
+<img src="https://img.youtube.com/vi/YyvSfVjQeL0/0.jpg">
+<h4>Prensa</h4>
+</div>
+
+<div class="card" onclick="playVideo('QOVaHwm-Q6U')">
+<img src="https://img.youtube.com/vi/QOVaHwm-Q6U/0.jpg">
+<h4>Zancadas</h4>
 </div>
 
 </div>
@@ -395,55 +280,36 @@ margin-top:40px;
 </section>
 
 
-<section class="section">
+<section class="section" id="rutinas">
 
-<h2>Tu progreso</h2>
+<h2>Rutinas</h2>
 
-<div class="progress">
-
-<div class="progressBox">
-<h3>Entrenamientos</h3>
-<p>12</p>
-</div>
-
-<div class="progressBox">
-<h3>Horas entrenadas</h3>
-<p>18</p>
-</div>
-
-<div class="progressBox">
-<h3>Ejercicios completados</h3>
-<p>42</p>
-</div>
-
-</div>
+<p>Rutina de hipertrofia, fuerza y principiantes.</p>
 
 </section>
 
 
-<section class="section">
+<section class="section" id="consejos">
+
+<h2>Consejos</h2>
+
+<p>Descansa, consume proteína suficiente y entrena con técnica correcta.</p>
+
+</section>
+
+
+<section class="section" id="contacto">
 
 <h2>Contacto</h2>
 
-<form>
-
-<input type="text" placeholder="Nombre">
-
-<input type="email" placeholder="Correo">
-
-<textarea rows="5" placeholder="Mensaje"></textarea>
-
-<button class="send">Enviar</button>
-
-</form>
+<p>Email: fitness@email.com</p>
 
 </section>
 
 
 <footer>
 
-<p>Fitness Streaming</p>
-<p>Entrena • Descansa • Transforma</p>
+<p>Fitness Library</p>
 
 </footer>
 
@@ -476,15 +342,6 @@ document.getElementById("player").src=""
 
 }
 
-function scrollToExercises(){
-
-document.getElementById("ejercicios").scrollIntoView({
-behavior:"smooth"
-})
-
-}
-
-
 document.getElementById("searchInput").addEventListener("keyup",function(){
 
 let filter=this.value.toLowerCase()
@@ -500,29 +357,6 @@ card.style.display=text.includes(filter)?"block":"none"
 })
 
 })
-
-
-function filterMuscle(muscle){
-
-let cards=document.querySelectorAll(".card")
-
-cards.forEach(card=>{
-
-if(muscle==="all"){
-card.style.display="block"
-}
-
-else if(card.classList.contains(muscle)){
-card.style.display="block"
-}
-
-else{
-card.style.display="none"
-}
-
-})
-
-}
 
 </script>
 
