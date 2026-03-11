@@ -5,18 +5,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Biblioteca Fitness | Pixel Forge Studio</title>
+<title>Biblioteca de Ejercicios</title>
 
 <style>
 
 body{
 margin:0;
 font-family:Arial;
-background:#0e0e0e;
+background:#0f0f0f;
 color:white;
 }
-
-/* HEADER */
 
 header{
 display:flex;
@@ -24,18 +22,11 @@ justify-content:space-between;
 align-items:center;
 padding:20px 40px;
 background:black;
-border-bottom:1px solid #222;
-}
-
-.logo{
-font-size:22px;
-font-weight:bold;
-color:#ff3c3c;
 }
 
 nav a{
-margin-left:20px;
 color:white;
+margin-left:20px;
 text-decoration:none;
 }
 
@@ -43,10 +34,8 @@ nav a:hover{
 color:#ff3c3c;
 }
 
-/* HERO */
-
 .hero{
-height:60vh;
+height:55vh;
 background:url("https://images.unsplash.com/photo-1517838277536-f5f99be501cd") center/cover;
 display:flex;
 align-items:center;
@@ -55,13 +44,11 @@ text-align:center;
 }
 
 .hero h1{
-font-size:42px;
 background:rgba(0,0,0,0.6);
 padding:25px;
 border-radius:10px;
+font-size:40px;
 }
-
-/* SEARCH */
 
 .search{
 text-align:center;
@@ -76,17 +63,13 @@ border-radius:6px;
 border:none;
 }
 
-/* SECTIONS */
-
 .section{
-padding:60px 10%;
+padding:50px 10%;
 }
 
 h2{
 color:#ff3c3c;
 }
-
-/* CAROUSEL */
 
 .carousel{
 display:flex;
@@ -101,7 +84,6 @@ background:#1c1c1c;
 border-radius:10px;
 cursor:pointer;
 transition:0.3s;
-box-shadow:0 0 10px rgba(0,0,0,0.6);
 }
 
 .card img{
@@ -117,10 +99,7 @@ margin:12px;
 
 .card:hover{
 transform:scale(1.08);
-box-shadow:0 0 15px rgba(255,60,60,0.6);
 }
-
-/* MODAL VIDEO */
 
 .modal{
 display:none;
@@ -147,16 +126,12 @@ font-size:30px;
 cursor:pointer;
 }
 
-/* TOOLS */
-
 .tool{
 background:#1c1c1c;
-padding:30px;
+padding:25px;
 border-radius:10px;
 margin-bottom:20px;
 }
-
-/* BUTTON */
 
 button{
 background:#ff3c3c;
@@ -170,16 +145,6 @@ cursor:pointer;
 button:hover{
 background:#ff0000;
 }
-
-/* CTA */
-
-.cta{
-background:#161616;
-text-align:center;
-padding:60px;
-}
-
-/* FORM */
 
 form{
 max-width:400px;
@@ -195,17 +160,31 @@ border-radius:6px;
 border:none;
 }
 
-/* FOOTER */
-
-footer{
-background:black;
+.webpromo{
+background:#161616;
 text-align:center;
-padding:25px;
+padding:60px 20px;
+margin-top:40px;
 }
 
-footer span{
-color:#ff3c3c;
-font-weight:bold;
+.webpromo h2{
+font-size:28px;
+}
+
+.webpromo p{
+margin-bottom:25px;
+}
+
+.whatsapp-btn{
+background:#25D366;
+font-size:18px;
+padding:14px 25px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:black;
 }
 
 </style>
@@ -216,7 +195,7 @@ font-weight:bold;
 
 <header>
 
-<div class="logo">Pixel Forge Studio</div>
+<h3>Biblioteca Fitness</h3>
 
 <nav>
 
@@ -230,7 +209,7 @@ font-weight:bold;
 
 <section class="hero">
 
-<h1>Biblioteca de Ejercicios en Español</h1>
+<h1>Biblioteca de Ejercicios de Gimnasio</h1>
 
 </section>
 
@@ -253,12 +232,12 @@ font-weight:bold;
 
 <div class="card" onclick="playVideo('VmB1G1K7v94')">
 <img src="https://img.youtube.com/vi/VmB1G1K7v94/0.jpg">
-<h4>Aperturas con mancuernas</h4>
+<h4>Aperturas</h4>
 </div>
 
 <div class="card" onclick="playVideo('IODxDxX7oi4')">
 <img src="https://img.youtube.com/vi/IODxDxX7oi4/0.jpg">
-<h4>Fondos para pecho</h4>
+<h4>Fondos</h4>
 </div>
 
 <div class="card" onclick="playVideo('DbFgADa2PL8')">
@@ -289,7 +268,7 @@ font-weight:bold;
 
 <div class="card" onclick="playVideo('pYcpY20QaE8')">
 <img src="https://img.youtube.com/vi/pYcpY20QaE8/0.jpg">
-<h4>Remo con mancuerna</h4>
+<h4>Remo mancuerna</h4>
 </div>
 
 </div>
@@ -313,7 +292,7 @@ font-weight:bold;
 
 </select>
 
-<button onclick="generarRutina()">Generar Rutina</button>
+<button onclick="generarRutina()">Generar</button>
 
 <p id="rutina"></p>
 
@@ -330,20 +309,6 @@ font-weight:bold;
 <p id="resultadoProteina"></p>
 
 </div>
-
-</section>
-
-<section class="cta">
-
-<h2>¿Quieres una página web profesional?</h2>
-
-<p>Desarrollado por Pixel Forge Studio</p>
-
-<button onclick="document.getElementById('contacto').scrollIntoView()">
-
-Solicitar página web
-
-</button>
 
 </section>
 
@@ -365,9 +330,28 @@ Solicitar página web
 
 </section>
 
+<section class="webpromo">
+
+<h2>¿Quieres una página web profesional como esta?</h2>
+
+<p>Diseñada por <b>Pixel Forge Studio</b><br>
+Creamos páginas modernas para negocios.</p>
+
+<a href="https://wa.me/528714042067">
+
+<button class="whatsapp-btn">
+
+Contactar por WhatsApp
+
+</button>
+
+</a>
+
+</section>
+
 <footer>
 
-Desarrollado por <span>Pixel Forge Studio</span>
+Biblioteca Fitness
 
 </footer>
 
@@ -397,20 +381,6 @@ document.getElementById("player").src=""
 
 }
 
-document.getElementById("buscador").addEventListener("keypress",function(e){
-
-if(e.key==="Enter"){
-
-let t=this.value.toLowerCase()
-
-if(t.includes("pecho")) location="#pecho"
-if(t.includes("espalda")) location="#espalda"
-if(t.includes("abdomen")) location="#abdomen"
-
-}
-
-})
-
 function generarRutina(){
 
 let obj=document.getElementById("objetivo").value
@@ -418,16 +388,13 @@ let obj=document.getElementById("objetivo").value
 let r=document.getElementById("rutina")
 
 if(obj==="hipertrofia")
-
-r.innerText="Pecho/Tríceps - Espalda/Bíceps - Pierna - Hombros"
+r.innerText="Pecho / Tríceps - Espalda / Bíceps - Pierna - Hombros"
 
 if(obj==="fuerza")
-
-r.innerText="Sentadilla, Press Banca y Peso Muerto 5x5"
+r.innerText="Sentadilla, Press Banca y Peso Muerto (5x5)"
 
 if(obj==="principiante")
-
-r.innerText="Rutina Full Body 3 días por semana"
+r.innerText="Full Body 3 días por semana"
 
 }
 
