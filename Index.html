@@ -1,1 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Biblioteca de Ejercicios de Gimnasio</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#111;
+color:white;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:black;
+position:sticky;
+top:0;
+z-index:10;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+color:red;
+}
+
+nav a{
+margin:0 15px;
+text-decoration:none;
+color:white;
+font-size:14px;
+}
+
+nav a:hover{
+color:red;
+}
+
+/* HERO */
+
+.hero{
+height:60vh;
+background:url("https://images.unsplash.com/photo-1517838277536-f5f99be501cd") center/cover no-repeat;
+display:flex;
+align-items:center;
+padding-left:50px;
+}
+
+.hero h1{
+font-size:40px;
+max-width:500px;
+}
+
+.hero button{
+margin-top:20px;
+padding:12px 20px;
+background:red;
+border:none;
+color:white;
+font-size:16px;
+cursor:pointer;
+border-radius:5px;
+}
+
+.hero button:hover{
+background:#cc0000;
+}
+
+/* FILAS NETFLIX */
+
+.section{
+padding:30px;
+}
+
+.row{
+display:flex;
+overflow-x:auto;
+gap:15px;
+padding-bottom:10px;
+}
+
+.row::-webkit-scrollbar{
+display:none;
+}
+
+/* TARJETAS */
+
+.card{
+min-width:220px;
+background:#1c1c1c;
+border-radius:8px;
+overflow:hidden;
+cursor:pointer;
+transition:0.3s;
+}
+
+.card img{
+width:100%;
+height:130px;
+object-fit:cover;
+}
+
+.card h4{
+margin:10px;
+font-size:14px;
+}
+
+.card:hover{
+transform:scale(1.08);
+box-shadow:0 0 15px rgba(0,0,0,0.8);
+}
+
+/* MODAL VIDEO */
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+justify-content:center;
+align-items:center;
+z-index:100;
+}
+
+.modal iframe{
+width:80%;
+height:70%;
+}
+
+.close{
+position:absolute;
+top:20px;
+right:40px;
+font-size:30px;
+cursor:pointer;
+}
+
+/* RUTINAS */
+
+.routines{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.routine-card{
+background:#1c1c1c;
+padding:20px;
+border-radius:10px;
+}
+
+/* CONSEJOS */
+
+.tips{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.tip{
+background:#1c1c1c;
+padding:20px;
+border-radius:10px;
+}
+
+/* CONTACTO */
+
+form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+input,textarea{
+padding:10px;
+border:none;
+border-radius:5px;
+}
+
+button.send{
+background:red;
+color:white;
+border:none;
+padding:12px;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+text-align:center;
+padding:20px;
+margin-top:40px;
+font-size:14px;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<header>
+
+<div class="logo">BIBLIOTECA DE EJERCICIOS</div>
+
+<nav>
+<a href="#">Inicio</a>
+<a href="#">Ejercicios</a>
+<a href="#">Rutinas</a>
+<a href="#">Consejos</a>
+<a href="#">Contacto</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+<h1>Transforma tu cuerpo con el entrenamiento correcto</h1>
+<button onclick="scrollToExercises()">Explorar ejercicios</button>
+</div>
+
+</section>
+
+
+<!-- EJERCICIOS -->
+
+<section class="section" id="ejercicios">
+
+<h2>Ejercicios de Pecho</h2>
+
+<div class="row">
+
+<div class="card" onclick="playVideo('gRVjAtPip0Y')">
+<img src="https://img.youtube.com/vi/gRVjAtPip0Y/0.jpg">
+<h4>Press de banca</h4>
+</div>
+
+<div class="card" onclick="playVideo('VmB1G1K7v94')">
+<img src="https://img.youtube.com/vi/VmB1G1K7v94/0.jpg">
+<h4>Aperturas con mancuernas</h4>
+</div>
+
+<div class="card" onclick="playVideo('IODxDxX7oi4')">
+<img src="https://img.youtube.com/vi/IODxDxX7oi4/0.jpg">
+<h4>Fondos</h4>
+</div>
+
+</div>
+
+
+<h2>Ejercicios de Espalda</h2>
+
+<div class="row">
+
+<div class="card" onclick="playVideo('eGo4IYlbE5g')">
+<img src="https://img.youtube.com/vi/eGo4IYlbE5g/0.jpg">
+<h4>Dominadas</h4>
+</div>
+
+<div class="card" onclick="playVideo('roCP6wCXPqo')">
+<img src="https://img.youtube.com/vi/roCP6wCXPqo/0.jpg">
+<h4>Remo con barra</h4>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RUTINAS -->
+
+<section class="section">
+
+<h2>Rutinas de Entrenamiento</h2>
+
+<div class="routines">
+
+<div class="routine-card">
+<h3>Hipertrofia</h3>
+<p>Lunes: Pecho y tríceps</p>
+<p>Miércoles: Espalda y bíceps</p>
+<p>Viernes: Piernas</p>
+</div>
+
+<div class="routine-card">
+<h3>Principiantes</h3>
+<p>Full body 3 veces por semana</p>
+<p>3 series por ejercicio</p>
+<p>10-12 repeticiones</p>
+</div>
+
+<div class="routine-card">
+<h3>Fuerza</h3>
+<p>5x5 en ejercicios compuestos</p>
+<p>Descanso largo</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONSEJOS -->
+
+<section class="section">
+
+<h2>Consejos Fitness</h2>
+
+<div class="tips">
+
+<div class="tip">
+<h4>Descanso</h4>
+<p>El músculo crece durante la recuperación.</p>
+</div>
+
+<div class="tip">
+<h4>Proteína</h4>
+<p>Consume proteína suficiente para la recuperación muscular.</p>
+</div>
+
+<div class="tip">
+<h4>Evita lesiones</h4>
+<p>Usa técnica correcta y controla el peso.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACTO -->
+
+<section class="section">
+
+<h2>Contacto</h2>
+
+<form>
+
+<input type="text" placeholder="Nombre">
+
+<input type="email" placeholder="Correo">
+
+<textarea rows="5" placeholder="Mensaje"></textarea>
+
+<button class="send">Enviar</button>
+
+</form>
+
+</section>
+
+
+<footer>
+
+<p>Biblioteca de Ejercicios de Gimnasio</p>
+<p>Entrena • Descansa • Transforma</p>
+
+</footer>
+
+
+<!-- MODAL VIDEO -->
+
+<div class="modal" id="videoModal">
+
+<span class="close" onclick="closeVideo()">✖</span>
+
+<iframe id="player" src="" frameborder="0" allowfullscreen></iframe>
+
+</div>
+
+
+<script>
+
+function playVideo(id){
+
+document.getElementById("videoModal").style.display="flex"
+
+document.getElementById("player").src=
+"https://www.youtube.com/embed/"+id
+
+}
+
+function closeVideo(){
+
+document.getElementById("videoModal").style.display="none"
+
+document.getElementById("player").src=""
+
+}
+
+function scrollToExercises(){
+
+document.getElementById("ejercicios").scrollIntoView({
+behavior:"smooth"
+})
+
+}
+
+</script>
+
+</body>
+</html>
