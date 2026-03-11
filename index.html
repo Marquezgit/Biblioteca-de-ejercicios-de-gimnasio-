@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Biblioteca de Ejercicios de Gimnasio</title>
+<title>Fitness Streaming | Biblioteca de Ejercicios</title>
 
 <style>
 
@@ -27,6 +27,7 @@ padding:15px 40px;
 background:black;
 position:sticky;
 top:0;
+z-index:100;
 }
 
 .logo{
@@ -52,11 +53,11 @@ height:60vh;
 background:url("https://images.unsplash.com/photo-1517838277536-f5f99be501cd") center/cover;
 display:flex;
 align-items:center;
-padding-left:50px;
+padding-left:60px;
 }
 
 .hero h1{
-font-size:40px;
+font-size:42px;
 max-width:500px;
 }
 
@@ -71,7 +72,7 @@ cursor:pointer;
 border-radius:5px;
 }
 
-/* BUSCADOR */
+/* SEARCH */
 
 .search{
 text-align:center;
@@ -84,10 +85,9 @@ width:60%;
 max-width:400px;
 border:none;
 border-radius:5px;
-font-size:16px;
 }
 
-/* FILTRO */
+/* FILTERS */
 
 .filters{
 text-align:center;
@@ -100,15 +100,15 @@ margin:5px;
 background:#222;
 color:white;
 border:none;
-cursor:pointer;
 border-radius:5px;
+cursor:pointer;
 }
 
 .filters button:hover{
 background:red;
 }
 
-/* SECCIONES */
+/* SECTION */
 
 .section{
 padding:30px;
@@ -124,7 +124,7 @@ gap:15px;
 display:none;
 }
 
-/* TARJETAS */
+/* CARD */
 
 .card{
 min-width:220px;
@@ -146,7 +146,7 @@ margin:10px;
 
 .card:hover{
 transform:scale(1.1);
-box-shadow:0 10px 25px rgba(0,0,0,0.8);
+box-shadow:0 10px 20px rgba(0,0,0,0.7);
 }
 
 /* VIDEO MODAL */
@@ -161,7 +161,7 @@ height:100%;
 background:rgba(0,0,0,0.9);
 justify-content:center;
 align-items:center;
-z-index:100;
+z-index:200;
 }
 
 .modal iframe{
@@ -177,7 +177,7 @@ font-size:30px;
 cursor:pointer;
 }
 
-/* RUTINAS */
+/* ROUTINES */
 
 .routines{
 display:grid;
@@ -191,7 +191,7 @@ padding:20px;
 border-radius:10px;
 }
 
-/* CONSEJOS */
+/* TIPS */
 
 .tips{
 display:grid;
@@ -205,7 +205,22 @@ padding:20px;
 border-radius:10px;
 }
 
-/* CONTACTO */
+/* PROGRESS */
+
+.progress{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.progressBox{
+background:#1c1c1c;
+padding:20px;
+border-radius:10px;
+text-align:center;
+}
+
+/* CONTACT */
 
 form{
 max-width:500px;
@@ -244,10 +259,9 @@ margin-top:40px;
 
 <body>
 
-
 <header>
 
-<div class="logo">BIBLIOTECA DE EJERCICIOS</div>
+<div class="logo">FITNESS STREAM</div>
 
 <nav>
 
@@ -255,6 +269,7 @@ margin-top:40px;
 <a href="#">Ejercicios</a>
 <a href="#">Rutinas</a>
 <a href="#">Consejos</a>
+<a href="#">Progreso</a>
 <a href="#">Contacto</a>
 
 </nav>
@@ -266,7 +281,7 @@ margin-top:40px;
 
 <div>
 
-<h1>Transforma tu cuerpo con el entrenamiento correcto</h1>
+<h1>Transforma tu cuerpo con entrenamiento inteligente</h1>
 
 <button onclick="scrollToExercises()">Explorar ejercicios</button>
 
@@ -275,16 +290,12 @@ margin-top:40px;
 </section>
 
 
-<!-- BUSCADOR -->
-
 <div class="search">
 
 <input type="text" id="searchInput" placeholder="Buscar ejercicio...">
 
 </div>
 
-
-<!-- FILTRO -->
 
 <div class="filters">
 
@@ -296,8 +307,6 @@ margin-top:40px;
 </div>
 
 
-<!-- EJERCICIOS -->
-
 <section class="section" id="ejercicios">
 
 <h2>Pecho</h2>
@@ -305,17 +314,13 @@ margin-top:40px;
 <div class="row">
 
 <div class="card pecho" onclick="playVideo('gRVjAtPip0Y')">
-
 <img src="https://img.youtube.com/vi/gRVjAtPip0Y/0.jpg">
 <h4>Press de banca</h4>
-
 </div>
 
 <div class="card pecho" onclick="playVideo('VmB1G1K7v94')">
-
 <img src="https://img.youtube.com/vi/VmB1G1K7v94/0.jpg">
 <h4>Aperturas con mancuernas</h4>
-
 </div>
 
 </div>
@@ -326,17 +331,13 @@ margin-top:40px;
 <div class="row">
 
 <div class="card espalda" onclick="playVideo('eGo4IYlbE5g')">
-
 <img src="https://img.youtube.com/vi/eGo4IYlbE5g/0.jpg">
 <h4>Dominadas</h4>
-
 </div>
 
 <div class="card espalda" onclick="playVideo('roCP6wCXPqo')">
-
 <img src="https://img.youtube.com/vi/roCP6wCXPqo/0.jpg">
 <h4>Remo con barra</h4>
-
 </div>
 
 </div>
@@ -344,36 +345,29 @@ margin-top:40px;
 </section>
 
 
-<!-- RUTINAS -->
-
 <section class="section">
 
-<h2>Rutinas</h2>
+<h2>Rutinas de Entrenamiento</h2>
 
 <div class="routines">
 
 <div class="routine">
-
 <h3>Hipertrofia</h3>
 <p>Lunes: Pecho</p>
 <p>Miércoles: Espalda</p>
 <p>Viernes: Piernas</p>
-
 </div>
 
 <div class="routine">
-
 <h3>Principiantes</h3>
-<p>Full body 3 veces por semana</p>
-
+<p>Full body</p>
+<p>3 días por semana</p>
 </div>
 
 </div>
 
 </section>
 
-
-<!-- CONSEJOS -->
 
 <section class="section">
 
@@ -388,12 +382,12 @@ margin-top:40px;
 
 <div class="tip">
 <h4>Proteína</h4>
-<p>Consume suficiente proteína.</p>
+<p>Consume proteína suficiente.</p>
 </div>
 
 <div class="tip">
 <h4>Técnica</h4>
-<p>Evita lesiones usando técnica correcta.</p>
+<p>La técnica correcta evita lesiones.</p>
 </div>
 
 </div>
@@ -401,7 +395,31 @@ margin-top:40px;
 </section>
 
 
-<!-- CONTACTO -->
+<section class="section">
+
+<h2>Tu progreso</h2>
+
+<div class="progress">
+
+<div class="progressBox">
+<h3>Entrenamientos</h3>
+<p>12</p>
+</div>
+
+<div class="progressBox">
+<h3>Horas entrenadas</h3>
+<p>18</p>
+</div>
+
+<div class="progressBox">
+<h3>Ejercicios completados</h3>
+<p>42</p>
+</div>
+
+</div>
+
+</section>
+
 
 <section class="section">
 
@@ -410,6 +428,7 @@ margin-top:40px;
 <form>
 
 <input type="text" placeholder="Nombre">
+
 <input type="email" placeholder="Correo">
 
 <textarea rows="5" placeholder="Mensaje"></textarea>
@@ -423,13 +442,11 @@ margin-top:40px;
 
 <footer>
 
-<p>Biblioteca de Ejercicios de Gimnasio</p>
+<p>Fitness Streaming</p>
 <p>Entrena • Descansa • Transforma</p>
 
 </footer>
 
-
-<!-- VIDEO MODAL -->
 
 <div class="modal" id="videoModal">
 
@@ -441,8 +458,6 @@ margin-top:40px;
 
 
 <script>
-
-/* VIDEO */
 
 function playVideo(id){
 
@@ -461,8 +476,6 @@ document.getElementById("player").src=""
 
 }
 
-/* SCROLL */
-
 function scrollToExercises(){
 
 document.getElementById("ejercicios").scrollIntoView({
@@ -471,7 +484,6 @@ behavior:"smooth"
 
 }
 
-/* BUSCADOR */
 
 document.getElementById("searchInput").addEventListener("keyup",function(){
 
@@ -489,7 +501,6 @@ card.style.display=text.includes(filter)?"block":"none"
 
 })
 
-/* FILTRO */
 
 function filterMuscle(muscle){
 
@@ -516,5 +527,4 @@ card.style.display="none"
 </script>
 
 </body>
-
 </html>
