@@ -17,8 +17,6 @@ background:#111;
 color:white;
 }
 
-/* HEADER */
-
 header{
 display:flex;
 justify-content:space-between;
@@ -27,7 +25,6 @@ padding:20px 40px;
 background:black;
 position:sticky;
 top:0;
-z-index:10;
 }
 
 .logo{
@@ -39,14 +36,11 @@ nav a{
 color:white;
 margin-left:20px;
 text-decoration:none;
-font-size:18px;
 }
 
 nav a:hover{
 color:#FFD700;
 }
-
-/* HERO */
 
 .hero{
 height:65vh;
@@ -64,8 +58,6 @@ padding:30px;
 border-radius:10px;
 }
 
-/* SEARCH */
-
 .search{
 text-align:center;
 padding:30px;
@@ -79,18 +71,13 @@ border:none;
 font-size:17px;
 }
 
-/* SECTION */
-
 .section{
 padding:40px;
 }
 
 .section h2{
 color:#FFD700;
-margin-bottom:10px;
 }
-
-/* NETFLIX ROW */
 
 .row{
 position:relative;
@@ -107,8 +94,6 @@ scroll-behavior:smooth;
 .rowPosters::-webkit-scrollbar{
 display:none;
 }
-
-/* CARD */
 
 .card{
 min-width:230px;
@@ -127,14 +112,11 @@ border-radius:10px 10px 0 0;
 
 .card h4{
 margin:10px;
-font-size:16px;
 }
 
 .card:hover{
 transform:scale(1.1);
 }
-
-/* SCROLL BUTTONS */
 
 .scrollBtn{
 position:absolute;
@@ -154,8 +136,6 @@ left:-20px;
 .right{
 right:-20px;
 }
-
-/* MODAL VIDEO */
 
 .modal{
 display:none;
@@ -182,8 +162,6 @@ font-size:35px;
 cursor:pointer;
 }
 
-/* TOOLS */
-
 .tool{
 background:#1c1c1c;
 padding:25px;
@@ -191,16 +169,12 @@ border-radius:10px;
 max-width:400px;
 }
 
-/* ROUTINES */
-
 .rutina{
 background:#1c1c1c;
 padding:20px;
 border-radius:10px;
 margin-bottom:15px;
 }
-
-/* CONTACT */
 
 input,textarea{
 padding:10px;
@@ -222,7 +196,6 @@ footer{
 text-align:center;
 padding:20px;
 background:black;
-margin-top:40px;
 }
 
 </style>
@@ -254,7 +227,7 @@ margin-top:40px;
 
 <div class="search">
 
-<input id="buscador" placeholder="🔍 Buscar músculo (pecho, espalda, bíceps...)">
+<input id="buscador" placeholder="🔍 Buscar músculo (pecho, espalda, hombros...)">
 
 </div>
 
@@ -270,25 +243,10 @@ margin-top:40px;
 
 <div class="rowPosters" id="row1">
 
-<div class="card" onclick="playVideo('gRVjAtPip0Y')">
-<img src="https://img.youtube.com/vi/gRVjAtPip0Y/0.jpg">
-<h4>Press de banca</h4>
-</div>
-
-<div class="card" onclick="playVideo('VmB1G1K7v94')">
-<img src="https://img.youtube.com/vi/VmB1G1K7v94/0.jpg">
-<h4>Aperturas con mancuernas</h4>
-</div>
-
-<div class="card" onclick="playVideo('IODxDxX7oi4')">
-<img src="https://img.youtube.com/vi/IODxDxX7oi4/0.jpg">
-<h4>Press inclinado</h4>
-</div>
-
-<div class="card" onclick="playVideo('eozdVDA78K0')">
-<img src="https://img.youtube.com/vi/eozdVDA78K0/0.jpg">
-<h4>Flexiones</h4>
-</div>
+<div class="card" onclick="playVideo('gRVjAtPip0Y')"><img src="https://img.youtube.com/vi/gRVjAtPip0Y/0.jpg"><h4>Press banca</h4></div>
+<div class="card" onclick="playVideo('VmB1G1K7v94')"><img src="https://img.youtube.com/vi/VmB1G1K7v94/0.jpg"><h4>Aperturas</h4></div>
+<div class="card" onclick="playVideo('IODxDxX7oi4')"><img src="https://img.youtube.com/vi/IODxDxX7oi4/0.jpg"><h4>Press inclinado</h4></div>
+<div class="card" onclick="playVideo('eozdVDA78K0')"><img src="https://img.youtube.com/vi/eozdVDA78K0/0.jpg"><h4>Flexiones</h4></div>
 
 </div>
 
@@ -306,29 +264,35 @@ margin-top:40px;
 
 <div class="rowPosters" id="row2">
 
-<div class="card" onclick="playVideo('eGo4IYlbE5g')">
-<img src="https://img.youtube.com/vi/eGo4IYlbE5g/0.jpg">
-<h4>Dominadas</h4>
-</div>
-
-<div class="card" onclick="playVideo('roCP6wCXPqo')">
-<img src="https://img.youtube.com/vi/roCP6wCXPqo/0.jpg">
-<h4>Remo con barra</h4>
-</div>
-
-<div class="card" onclick="playVideo('GZbfZ033f74')">
-<img src="https://img.youtube.com/vi/GZbfZ033f74/0.jpg">
-<h4>Jalón al pecho</h4>
-</div>
-
-<div class="card" onclick="playVideo('D7KaRcUTQeE')">
-<img src="https://img.youtube.com/vi/D7KaRcUTQeE/0.jpg">
-<h4>Remo con mancuerna</h4>
-</div>
+<div class="card" onclick="playVideo('eGo4IYlbE5g')"><img src="https://img.youtube.com/vi/eGo4IYlbE5g/0.jpg"><h4>Dominadas</h4></div>
+<div class="card" onclick="playVideo('roCP6wCXPqo')"><img src="https://img.youtube.com/vi/roCP6wCXPqo/0.jpg"><h4>Remo con barra</h4></div>
+<div class="card" onclick="playVideo('GZbfZ033f74')"><img src="https://img.youtube.com/vi/GZbfZ033f74/0.jpg"><h4>Jalón al pecho</h4></div>
+<div class="card" onclick="playVideo('D7KaRcUTQeE')"><img src="https://img.youtube.com/vi/D7KaRcUTQeE/0.jpg"><h4>Remo mancuerna</h4></div>
 
 </div>
 
 <button class="scrollBtn right" onclick="scrollRow('row2',300)">❯</button>
+
+</div>
+
+<!-- HOMBROS -->
+
+<h2 id="hombros">Hombros</h2>
+
+<div class="row">
+
+<button class="scrollBtn left" onclick="scrollRow('row3',-300)">❮</button>
+
+<div class="rowPosters" id="row3">
+
+<div class="card" onclick="playVideo('qEwKCR5JCog')"><img src="https://img.youtube.com/vi/qEwKCR5JCog/0.jpg"><h4>Press militar</h4></div>
+<div class="card" onclick="playVideo('3VcKaXpzqRo')"><img src="https://img.youtube.com/vi/3VcKaXpzqRo/0.jpg"><h4>Elevaciones laterales</h4></div>
+<div class="card" onclick="playVideo('6Z15_WdXmVw')"><img src="https://img.youtube.com/vi/6Z15_WdXmVw/0.jpg"><h4>Elevaciones frontales</h4></div>
+<div class="card" onclick="playVideo('rep-qVOkqgk')"><img src="https://img.youtube.com/vi/rep-qVOkqgk/0.jpg"><h4>Face pull</h4></div>
+
+</div>
+
+<button class="scrollBtn right" onclick="scrollRow('row3',300)">❯</button>
 
 </div>
 
@@ -338,105 +302,83 @@ margin-top:40px;
 
 <div class="row">
 
-<button class="scrollBtn left" onclick="scrollRow('row3',-300)">❮</button>
+<button class="scrollBtn left" onclick="scrollRow('row4',-300)">❮</button>
 
-<div class="rowPosters" id="row3">
+<div class="rowPosters" id="row4">
 
-<div class="card" onclick="playVideo('ykJmrZ5v0Oo')">
-<img src="https://img.youtube.com/vi/ykJmrZ5v0Oo/0.jpg">
-<h4>Curl con barra</h4>
-</div>
-
-<div class="card" onclick="playVideo('av7-8igSXTs')">
-<img src="https://img.youtube.com/vi/av7-8igSXTs/0.jpg">
-<h4>Curl alterno</h4>
-</div>
-
-<div class="card" onclick="playVideo('soxrZlIl35U')">
-<img src="https://img.youtube.com/vi/soxrZlIl35U/0.jpg">
-<h4>Curl martillo</h4>
-</div>
-
-<div class="card" onclick="playVideo('kwG2ipFRgfo')">
-<img src="https://img.youtube.com/vi/kwG2ipFRgfo/0.jpg">
-<h4>Curl concentrado</h4>
-</div>
+<div class="card" onclick="playVideo('ykJmrZ5v0Oo')"><img src="https://img.youtube.com/vi/ykJmrZ5v0Oo/0.jpg"><h4>Curl barra</h4></div>
+<div class="card" onclick="playVideo('av7-8igSXTs')"><img src="https://img.youtube.com/vi/av7-8igSXTs/0.jpg"><h4>Curl alterno</h4></div>
+<div class="card" onclick="playVideo('soxrZlIl35U')"><img src="https://img.youtube.com/vi/soxrZlIl35U/0.jpg"><h4>Curl martillo</h4></div>
+<div class="card" onclick="playVideo('kwG2ipFRgfo')"><img src="https://img.youtube.com/vi/kwG2ipFRgfo/0.jpg"><h4>Curl concentrado</h4></div>
 
 </div>
 
-<button class="scrollBtn right" onclick="scrollRow('row3',300)">❯</button>
+<button class="scrollBtn right" onclick="scrollRow('row4',300)">❯</button>
 
 </div>
 
-</section>
+<!-- TRICEPS -->
 
-<!-- HERRAMIENTAS -->
+<h2 id="triceps">Tríceps</h2>
 
-<section class="section" id="herramientas">
+<div class="row">
 
-<h2>Calculadora de proteína</h2>
+<button class="scrollBtn left" onclick="scrollRow('row5',-300)">❮</button>
 
-<div class="tool">
+<div class="rowPosters" id="row5">
 
-<input type="number" id="peso" placeholder="Peso en kg">
-
-<button onclick="proteina()">Calcular</button>
-
-<p id="resultado"></p>
-
-</div>
-
-</section>
-
-<!-- RUTINAS -->
-
-<section class="section" id="rutinas">
-
-<h2>Rutinas</h2>
-
-<div class="rutina">
-
-<h3>Principiante</h3>
-
-<p>Entrena 3 días por semana con rutina full body.</p>
+<div class="card" onclick="playVideo('6kALZikXxLc')"><img src="https://img.youtube.com/vi/6kALZikXxLc/0.jpg"><h4>Fondos</h4></div>
+<div class="card" onclick="playVideo('vB5OHsJ3EME')"><img src="https://img.youtube.com/vi/vB5OHsJ3EME/0.jpg"><h4>Extensión polea</h4></div>
+<div class="card" onclick="playVideo('2-LAMcpzODU')"><img src="https://img.youtube.com/vi/2-LAMcpzODU/0.jpg"><h4>Press cerrado</h4></div>
+<div class="card" onclick="playVideo('YbX7Wd8jQ-Q')"><img src="https://img.youtube.com/vi/YbX7Wd8jQ-Q/0.jpg"><h4>Extensión mancuerna</h4></div>
 
 </div>
 
-<div class="rutina">
-
-<h3>Intermedio</h3>
-
-<p>Entrena 4-5 días con división push pull legs.</p>
+<button class="scrollBtn right" onclick="scrollRow('row5',300)">❯</button>
 
 </div>
 
-<div class="rutina">
+<!-- GLUTEOS -->
 
-<h3>Avanzado</h3>
+<h2 id="gluteos">Glúteos / Piernas</h2>
 
-<p>Entrena 5-6 días con división por grupos musculares.</p>
+<div class="row">
+
+<button class="scrollBtn left" onclick="scrollRow('row6',-300)">❮</button>
+
+<div class="rowPosters" id="row6">
+
+<div class="card" onclick="playVideo('Dy28eq2PjcM')"><img src="https://img.youtube.com/vi/Dy28eq2PjcM/0.jpg"><h4>Sentadilla</h4></div>
+<div class="card" onclick="playVideo('2SHsk9AzdjA')"><img src="https://img.youtube.com/vi/2SHsk9AzdjA/0.jpg"><h4>Hip thrust</h4></div>
+<div class="card" onclick="playVideo('QOVaHwm-Q6U')"><img src="https://img.youtube.com/vi/QOVaHwm-Q6U/0.jpg"><h4>Prensa</h4></div>
+<div class="card" onclick="playVideo('IZxyjW7MPJQ')"><img src="https://img.youtube.com/vi/IZxyjW7MPJQ/0.jpg"><h4>Peso muerto</h4></div>
 
 </div>
 
-</section>
+<button class="scrollBtn right" onclick="scrollRow('row6',300)">❯</button>
 
-<!-- CONTACTO -->
+</div>
 
-<section class="section" id="contacto">
+<!-- ABDOMEN -->
 
-<h2>Contacto</h2>
+<h2 id="abdomen">Abdomen</h2>
 
-<form>
+<div class="row">
 
-<input placeholder="Nombre">
+<button class="scrollBtn left" onclick="scrollRow('row7',-300)">❮</button>
 
-<input placeholder="Correo">
+<div class="rowPosters" id="row7">
 
-<textarea placeholder="Mensaje"></textarea>
+<div class="card" onclick="playVideo('AnYl6Nk9GOA')"><img src="https://img.youtube.com/vi/AnYl6Nk9GOA/0.jpg"><h4>Crunch</h4></div>
+<div class="card" onclick="playVideo('JB2oyawG9KI')"><img src="https://img.youtube.com/vi/JB2oyawG9KI/0.jpg"><h4>Elevaciones piernas</h4></div>
+<div class="card" onclick="playVideo('pSHjTRCQxIw')"><img src="https://img.youtube.com/vi/pSHjTRCQxIw/0.jpg"><h4>Planchas</h4></div>
+<div class="card" onclick="playVideo('l4kQd9eWclE')"><img src="https://img.youtube.com/vi/l4kQd9eWclE/0.jpg"><h4>Russian twist</h4></div>
 
-<button>Enviar</button>
+</div>
 
-</form>
+<button class="scrollBtn right" onclick="scrollRow('row7',300)">❯</button>
+
+</div>
 
 </section>
 
@@ -457,46 +399,24 @@ Biblioteca Fitness
 <script>
 
 function scrollRow(id,amount){
-
 document.getElementById(id).scrollLeft+=amount
-
 }
 
 function playVideo(id){
-
 document.getElementById("modal").style.display="flex"
-
 document.getElementById("player").src="https://www.youtube.com/embed/"+id
-
 }
 
 function closeVideo(){
-
 document.getElementById("modal").style.display="none"
-
 document.getElementById("player").src=""
-
-}
-
-function proteina(){
-
-let peso=document.getElementById("peso").value
-
-let gramos=peso*2
-
-document.getElementById("resultado").innerText=
-"Debes consumir aproximadamente "+gramos+" gramos de proteína al día."
-
 }
 
 document.getElementById("buscador").addEventListener("keypress",function(e){
 
 if(e.key==="Enter"){
-
 let musculo=this.value.toLowerCase()
-
 location.hash=musculo
-
 }
 
 })
