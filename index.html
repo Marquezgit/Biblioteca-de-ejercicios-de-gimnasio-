@@ -5,119 +5,142 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Biblioteca de Ejercicios de Gimnasio</title>
+<title>Biblioteca Fitness | Pixel Forge Studio</title>
 
 <style>
 
 body{
 margin:0;
-font-family:Arial;
-background:#111;
+font-family:Segoe UI;
+background:#0f0f0f;
 color:white;
 }
+
+/* HEADER */
 
 header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 40px;
+padding:20px 40px;
 background:black;
-position:sticky;
-top:0;
-z-index:100;
+border-bottom:1px solid #222;
 }
 
 .logo{
-color:red;
 font-size:22px;
 font-weight:bold;
+color:#ff3b3b;
 }
 
 nav a{
+margin-left:20px;
 color:white;
-margin:0 10px;
 text-decoration:none;
 }
 
 nav a:hover{
-color:red;
+color:#ff3b3b;
 }
+
+/* HERO */
 
 .hero{
 height:60vh;
-background:url("https://images.unsplash.com/photo-1517838277536-f5f99be501cd") center/cover;
+background:url("https://images.unsplash.com/photo-1558611848-73f7eb4001ab") center/cover;
 display:flex;
 align-items:center;
-padding-left:60px;
+justify-content:center;
+text-align:center;
 }
 
 .hero h1{
+background:rgba(0,0,0,0.6);
+padding:25px;
+border-radius:10px;
 font-size:40px;
 }
 
-.section{
-padding:40px;
-}
+/* SEARCH */
 
 .search{
 text-align:center;
-padding:20px;
+padding:30px;
 }
 
 .search input{
 padding:12px;
 width:60%;
 max-width:400px;
+border-radius:6px;
 border:none;
-border-radius:5px;
 }
 
-.row-container{
+/* SECTIONS */
+
+.section{
+padding:60px 10%;
+}
+
+h2{
+color:#ff3b3b;
+}
+
+/* CAROUSEL */
+
+.carousel-container{
 position:relative;
 }
 
 .row{
 display:flex;
+gap:18px;
 overflow-x:auto;
-gap:15px;
 scroll-behavior:smooth;
 }
 
 .card{
-min-width:220px;
-background:#1c1c1c;
-border-radius:8px;
+min-width:230px;
+background:#1a1a1a;
+border-radius:10px;
 cursor:pointer;
 transition:0.3s;
+box-shadow:0 0 10px rgba(0,0,0,0.6);
 }
 
 .card img{
 width:100%;
 height:130px;
 object-fit:cover;
+border-radius:10px 10px 0 0;
 }
 
 .card h4{
-margin:10px;
+margin:12px;
 }
 
 .card:hover{
-transform:scale(1.1);
+transform:scale(1.08);
+box-shadow:0 0 15px rgba(255,60,60,0.6);
 }
 
-.scroll-btn{
+/* CAROUSEL BUTTONS */
+
+.arrow{
 position:absolute;
 top:40%;
-background:red;
+background:#ff3b3b;
 border:none;
 color:white;
 font-size:22px;
-cursor:pointer;
 padding:10px;
+cursor:pointer;
 }
 
 .left{left:-10px}
 .right{right:-10px}
+
+/* VIDEO MODAL */
 
 .modal{
 display:none;
@@ -144,76 +167,108 @@ font-size:30px;
 cursor:pointer;
 }
 
+/* FITNESS TOOLS */
+
+.tool-box{
+background:#1a1a1a;
+padding:30px;
+border-radius:10px;
+margin-top:30px;
+}
+
+button{
+background:#ff3b3b;
+border:none;
+padding:12px 20px;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff0000;
+}
+
+/* CTA */
+
+.cta{
+text-align:center;
+background:#161616;
+padding:60px;
+}
+
+.cta h2{
+margin-bottom:20px;
+}
+
+/* FORM */
+
 form{
-max-width:500px;
+max-width:400px;
 margin:auto;
 display:flex;
 flex-direction:column;
 gap:10px;
 }
 
-input, textarea, select{
+input,textarea,select{
 padding:10px;
+border-radius:6px;
 border:none;
-border-radius:5px;
 }
 
-button{
-padding:12px;
-background:red;
-color:white;
-border:none;
-border-radius:5px;
-cursor:pointer;
-}
-
-button:hover{
-background:#cc0000;
-}
+/* FOOTER */
 
 footer{
-background:black;
 text-align:center;
-padding:20px;
+padding:25px;
+background:black;
+margin-top:40px;
+}
+
+footer span{
+color:#ff3b3b;
+font-weight:bold;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
 
-<div class="logo">Biblioteca de Ejercicios</div>
+<div class="logo">Pixel Forge Studio</div>
 
 <nav>
 
-<a href="#inicio">Inicio</a>
 <a href="#ejercicios">Ejercicios</a>
-<a href="#rutinas">Rutinas</a>
-<a href="#consejos">Consejos</a>
+<a href="#herramientas">Herramientas</a>
 <a href="#contacto">Contacto</a>
 
 </nav>
 
 </header>
 
-<section class="hero" id="inicio">
+<section class="hero">
 
-<h1>Transforma tu cuerpo con el entrenamiento correcto</h1>
+<h1>Biblioteca Profesional de Ejercicios</h1>
 
 </section>
 
 <div class="search">
 
-<input type="text" id="buscador" placeholder="Buscar músculo o ejercicio y presionar Enter">
+<input id="buscador" placeholder="Buscar músculo o ejercicio">
 
 </div>
 
 <section class="section" id="ejercicios">
 
 <h2 id="pecho">Pecho</h2>
+
+<div class="carousel-container">
+
+<button class="arrow left" onclick="scrollRow(this,-300)">❮</button>
 
 <div class="row">
 
@@ -239,6 +294,10 @@ padding:20px;
 
 </div>
 
+<button class="arrow right" onclick="scrollRow(this,300)">❯</button>
+
+</div>
+
 <h2 id="espalda">Espalda</h2>
 
 <div class="row">
@@ -260,146 +319,20 @@ padding:20px;
 
 <div class="card" onclick="playVideo('pYcpY20QaE8')">
 <img src="https://img.youtube.com/vi/pYcpY20QaE8/0.jpg">
-<h4>Remo con mancuerna</h4>
-</div>
-
-</div>
-
-<h2 id="hombros">Hombros</h2>
-
-<div class="row">
-
-<div class="card" onclick="playVideo('B-aVuyhvLHU')">
-<img src="https://img.youtube.com/vi/B-aVuyhvLHU/0.jpg">
-<h4>Press militar</h4>
-</div>
-
-<div class="card" onclick="playVideo('3VcKaXpzqRo')">
-<img src="https://img.youtube.com/vi/3VcKaXpzqRo/0.jpg">
-<h4>Elevaciones laterales</h4>
-</div>
-
-<div class="card" onclick="playVideo('qEwKCR5JCog')">
-<img src="https://img.youtube.com/vi/qEwKCR5JCog/0.jpg">
-<h4>Elevaciones frontales</h4>
-</div>
-
-<div class="card" onclick="playVideo('pXH2vH5Oe8E')">
-<img src="https://img.youtube.com/vi/pXH2vH5Oe8E/0.jpg">
-<h4>Pájaros</h4>
-</div>
-
-</div>
-
-<h2 id="biceps">Bíceps</h2>
-
-<div class="row">
-
-<div class="card" onclick="playVideo('ykJmrZ5v0Oo')">
-<img src="https://img.youtube.com/vi/ykJmrZ5v0Oo/0.jpg">
-<h4>Curl con barra</h4>
-</div>
-
-<div class="card" onclick="playVideo('kwG2ipFRgfo')">
-<img src="https://img.youtube.com/vi/kwG2ipFRgfo/0.jpg">
-<h4>Curl alterno</h4>
-</div>
-
-<div class="card" onclick="playVideo('av7-8igSXTs')">
-<img src="https://img.youtube.com/vi/av7-8igSXTs/0.jpg">
-<h4>Curl martillo</h4>
-</div>
-
-<div class="card" onclick="playVideo('ykJmrZ5v0Oo')">
-<img src="https://img.youtube.com/vi/ykJmrZ5v0Oo/0.jpg">
-<h4>Curl concentrado</h4>
-</div>
-
-</div>
-
-<h2 id="triceps">Tríceps</h2>
-
-<div class="row">
-
-<div class="card" onclick="playVideo('2-LAMcpzODU')">
-<img src="https://img.youtube.com/vi/2-LAMcpzODU/0.jpg">
-<h4>Extensión tríceps</h4>
-</div>
-
-<div class="card" onclick="playVideo('6SS6K3lAwZ8')">
-<img src="https://img.youtube.com/vi/6SS6K3lAwZ8/0.jpg">
-<h4>Fondos banca</h4>
-</div>
-
-<div class="card" onclick="playVideo('nRiJVZDpdL0')">
-<img src="https://img.youtube.com/vi/nRiJVZDpdL0/0.jpg">
-<h4>Patada tríceps</h4>
-</div>
-
-<div class="card" onclick="playVideo('vB5OHsJ3EME')">
-<img src="https://img.youtube.com/vi/vB5OHsJ3EME/0.jpg">
-<h4>Press cerrado</h4>
-</div>
-
-</div>
-
-<h2 id="gluteos">Glúteos</h2>
-
-<div class="row">
-
-<div class="card" onclick="playVideo('LM8XHLYJoYs')">
-<img src="https://img.youtube.com/vi/LM8XHLYJoYs/0.jpg">
-<h4>Hip thrust</h4>
-</div>
-
-<div class="card" onclick="playVideo('QOVaHwm-Q6U')">
-<img src="https://img.youtube.com/vi/QOVaHwm-Q6U/0.jpg">
-<h4>Zancadas</h4>
-</div>
-
-<div class="card" onclick="playVideo('aclHkVaku9U')">
-<img src="https://img.youtube.com/vi/aclHkVaku9U/0.jpg">
-<h4>Sentadilla</h4>
-</div>
-
-<div class="card" onclick="playVideo('YyvSfVjQeL0')">
-<img src="https://img.youtube.com/vi/YyvSfVjQeL0/0.jpg">
-<h4>Prensa</h4>
-</div>
-
-</div>
-
-<h2 id="abdomen">Abdomen</h2>
-
-<div class="row">
-
-<div class="card" onclick="playVideo('1fbU_MkV7NE')">
-<img src="https://img.youtube.com/vi/1fbU_MkV7NE/0.jpg">
-<h4>Crunch abdominal</h4>
-</div>
-
-<div class="card" onclick="playVideo('pSHjTRCQxIw')">
-<img src="https://img.youtube.com/vi/pSHjTRCQxIw/0.jpg">
-<h4>Elevación piernas</h4>
-</div>
-
-<div class="card" onclick="playVideo('ASdvN_XEl_c')">
-<img src="https://img.youtube.com/vi/ASdvN_XEl_c/0.jpg">
-<h4>Plancha</h4>
-</div>
-
-<div class="card" onclick="playVideo('JB2oyawG9KI')">
-<img src="https://img.youtube.com/vi/JB2oyawG9KI/0.jpg">
-<h4>Bicicleta abdominal</h4>
+<h4>Remo mancuerna</h4>
 </div>
 
 </div>
 
 </section>
 
-<section class="section" id="rutinas">
+<section class="section" id="herramientas">
 
-<h2>Generador de Rutinas</h2>
+<h2>Herramientas Fitness</h2>
+
+<div class="tool-box">
+
+<h3>Generador de Rutina</h3>
 
 <select id="objetivo">
 
@@ -410,29 +343,35 @@ padding:20px;
 
 </select>
 
-<button onclick="generarRutina()">Generar rutina</button>
+<button onclick="generarRutina()">Generar</button>
 
-<p id="resultadoRutina"></p>
+<p id="rutina"></p>
 
-</section>
+</div>
 
-<section class="section">
+<div class="tool-box">
 
-<h2>Calculadora de proteína</h2>
+<h3>Calculadora de Proteína</h3>
 
 <input type="number" id="peso" placeholder="Tu peso en kg">
 
-<button onclick="calcularProteina()">Calcular</button>
+<button onclick="proteina()">Calcular</button>
 
-<p id="proteinaResultado"></p>
+<p id="resultadoProteina"></p>
+
+</div>
 
 </section>
 
-<section class="section" id="consejos">
+<section class="cta">
 
-<h2>Consejos Fitness</h2>
+<h2>¿Necesitas una página web profesional?</h2>
 
-<p>Descansa entre 60 y 90 segundos para hipertrofia y consume suficiente proteína.</p>
+<p>Pixel Forge Studio diseña páginas modernas optimizadas para ventas.</p>
+
+<button onclick="document.getElementById('contacto').scrollIntoView()">
+Solicitar página web
+</button>
 
 </section>
 
@@ -442,13 +381,13 @@ padding:20px;
 
 <form action="https://formsubmit.co/Gus.marquez2024@gmail.com" method="POST">
 
-<input type="text" name="nombre" placeholder="Tu nombre" required>
+<input type="text" name="nombre" placeholder="Nombre" required>
 
-<input type="email" name="correo" placeholder="Tu correo" required>
+<input type="email" name="correo" placeholder="Correo" required>
 
-<textarea name="mensaje" placeholder="Tu mensaje"></textarea>
+<textarea name="mensaje" placeholder="Mensaje"></textarea>
 
-<button type="submit">Enviar mensaje</button>
+<button type="submit">Enviar</button>
 
 </form>
 
@@ -456,15 +395,15 @@ padding:20px;
 
 <footer>
 
-<p>Biblioteca de Ejercicios de Gimnasio</p>
+Diseñado por <span>Pixel Forge Studio</span> | Desarrollo Web Profesional
 
 </footer>
 
-<div class="modal" id="videoModal">
+<div class="modal" id="modal">
 
 <span class="close" onclick="closeVideo()">✖</span>
 
-<iframe id="player" frameborder="0" allowfullscreen></iframe>
+<iframe id="videoPlayer" frameborder="0" allowfullscreen></iframe>
 
 </div>
 
@@ -472,15 +411,24 @@ padding:20px;
 
 function playVideo(id){
 
-document.getElementById("videoModal").style.display="flex"
-document.getElementById("player").src="https://www.youtube.com/embed/"+id
+document.getElementById("modal").style.display="flex"
+document.getElementById("videoPlayer").src="https://www.youtube.com/embed/"+id
 
 }
 
 function closeVideo(){
 
-document.getElementById("videoModal").style.display="none"
-document.getElementById("player").src=""
+document.getElementById("modal").style.display="none"
+document.getElementById("videoPlayer").src=""
+
+}
+
+function scrollRow(btn,amount){
+
+btn.parentElement.querySelector(".row").scrollBy({
+left:amount,
+behavior:"smooth"
+})
 
 }
 
@@ -488,15 +436,13 @@ document.getElementById("buscador").addEventListener("keypress",function(e){
 
 if(e.key==="Enter"){
 
-let texto=this.value.toLowerCase()
+let t=this.value.toLowerCase()
 
-if(texto.includes("pecho")) location.href="#pecho"
-if(texto.includes("espalda")) location.href="#espalda"
-if(texto.includes("hombro")) location.href="#hombros"
-if(texto.includes("bíceps")||texto.includes("biceps")) location.href="#biceps"
-if(texto.includes("tríceps")||texto.includes("triceps")) location.href="#triceps"
-if(texto.includes("glúteos")||texto.includes("gluteos")) location.href="#gluteos"
-if(texto.includes("abdomen")) location.href="#abdomen"
+if(t.includes("pecho")) location="#pecho"
+if(t.includes("espalda")) location="#espalda"
+if(t.includes("abdomen")) location="#abdomen"
+if(t.includes("biceps")) location="#biceps"
+if(t.includes("triceps")) location="#triceps"
 
 }
 
@@ -504,27 +450,28 @@ if(texto.includes("abdomen")) location.href="#abdomen"
 
 function generarRutina(){
 
-let objetivo=document.getElementById("objetivo").value
-let resultado=document.getElementById("resultadoRutina")
+let obj=document.getElementById("objetivo").value
+let r=document.getElementById("rutina")
 
-if(objetivo==="hipertrofia")
-resultado.innerText="Pecho-Tríceps / Espalda-Bíceps / Pierna / Hombros"
+if(obj=="hipertrofia")
+r.innerText="Día 1 Pecho/Tríceps | Día 2 Espalda/Bíceps | Día 3 Pierna | Día 4 Hombros"
 
-if(objetivo==="fuerza")
-resultado.innerText="Rutina 5x5: Sentadilla, Press banca y Peso muerto"
+if(obj=="fuerza")
+r.innerText="Rutina 5x5 con sentadilla, press banca y peso muerto"
 
-if(objetivo==="principiante")
-resultado.innerText="Rutina Full Body 3 días por semana"
+if(obj=="principiante")
+r.innerText="Rutina Full Body 3 días por semana"
 
 }
 
-function calcularProteina(){
+function proteina(){
 
 let peso=document.getElementById("peso").value
-let proteina=peso*2
 
-document.getElementById("proteinaResultado").innerText=
-"Debes consumir aproximadamente "+proteina+" gramos de proteína al día"
+let gramos=peso*2
+
+document.getElementById("resultadoProteina").innerText=
+"Debes consumir aproximadamente "+gramos+"g de proteína diaria"
 
 }
 
