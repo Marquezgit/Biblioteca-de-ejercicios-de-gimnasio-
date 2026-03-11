@@ -11,8 +11,8 @@
 
 body{
 margin:0;
-font-family:Segoe UI;
-background:#0f0f0f;
+font-family:Arial;
+background:#0e0e0e;
 color:white;
 }
 
@@ -30,7 +30,7 @@ border-bottom:1px solid #222;
 .logo{
 font-size:22px;
 font-weight:bold;
-color:#ff3b3b;
+color:#ff3c3c;
 }
 
 nav a{
@@ -40,14 +40,14 @@ text-decoration:none;
 }
 
 nav a:hover{
-color:#ff3b3b;
+color:#ff3c3c;
 }
 
 /* HERO */
 
 .hero{
 height:60vh;
-background:url("https://images.unsplash.com/photo-1558611848-73f7eb4001ab") center/cover;
+background:url("https://images.unsplash.com/photo-1517838277536-f5f99be501cd") center/cover;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -55,10 +55,10 @@ text-align:center;
 }
 
 .hero h1{
+font-size:42px;
 background:rgba(0,0,0,0.6);
 padding:25px;
 border-radius:10px;
-font-size:40px;
 }
 
 /* SEARCH */
@@ -83,25 +83,21 @@ padding:60px 10%;
 }
 
 h2{
-color:#ff3b3b;
+color:#ff3c3c;
 }
 
 /* CAROUSEL */
 
-.carousel-container{
-position:relative;
-}
-
-.row{
+.carousel{
 display:flex;
-gap:18px;
 overflow-x:auto;
+gap:18px;
 scroll-behavior:smooth;
 }
 
 .card{
 min-width:230px;
-background:#1a1a1a;
+background:#1c1c1c;
 border-radius:10px;
 cursor:pointer;
 transition:0.3s;
@@ -124,23 +120,7 @@ transform:scale(1.08);
 box-shadow:0 0 15px rgba(255,60,60,0.6);
 }
 
-/* CAROUSEL BUTTONS */
-
-.arrow{
-position:absolute;
-top:40%;
-background:#ff3b3b;
-border:none;
-color:white;
-font-size:22px;
-padding:10px;
-cursor:pointer;
-}
-
-.left{left:-10px}
-.right{right:-10px}
-
-/* VIDEO MODAL */
+/* MODAL VIDEO */
 
 .modal{
 display:none;
@@ -161,23 +141,25 @@ height:70%;
 
 .close{
 position:absolute;
-top:20px;
+top:30px;
 right:40px;
 font-size:30px;
 cursor:pointer;
 }
 
-/* FITNESS TOOLS */
+/* TOOLS */
 
-.tool-box{
-background:#1a1a1a;
+.tool{
+background:#1c1c1c;
 padding:30px;
 border-radius:10px;
-margin-top:30px;
+margin-bottom:20px;
 }
 
+/* BUTTON */
+
 button{
-background:#ff3b3b;
+background:#ff3c3c;
 border:none;
 padding:12px 20px;
 color:white;
@@ -192,13 +174,9 @@ background:#ff0000;
 /* CTA */
 
 .cta{
-text-align:center;
 background:#161616;
+text-align:center;
 padding:60px;
-}
-
-.cta h2{
-margin-bottom:20px;
 }
 
 /* FORM */
@@ -220,18 +198,18 @@ border:none;
 /* FOOTER */
 
 footer{
+background:black;
 text-align:center;
 padding:25px;
-background:black;
-margin-top:40px;
 }
 
 footer span{
-color:#ff3b3b;
+color:#ff3c3c;
 font-weight:bold;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -252,13 +230,13 @@ font-weight:bold;
 
 <section class="hero">
 
-<h1>Biblioteca Profesional de Ejercicios</h1>
+<h1>Biblioteca de Ejercicios en Español</h1>
 
 </section>
 
 <div class="search">
 
-<input id="buscador" placeholder="Buscar músculo o ejercicio">
+<input id="buscador" placeholder="Buscar músculo (pecho, espalda, abdomen...)">
 
 </div>
 
@@ -266,11 +244,7 @@ font-weight:bold;
 
 <h2 id="pecho">Pecho</h2>
 
-<div class="carousel-container">
-
-<button class="arrow left" onclick="scrollRow(this,-300)">❮</button>
-
-<div class="row">
+<div class="carousel">
 
 <div class="card" onclick="playVideo('gRVjAtPip0Y')">
 <img src="https://img.youtube.com/vi/gRVjAtPip0Y/0.jpg">
@@ -279,12 +253,12 @@ font-weight:bold;
 
 <div class="card" onclick="playVideo('VmB1G1K7v94')">
 <img src="https://img.youtube.com/vi/VmB1G1K7v94/0.jpg">
-<h4>Aperturas</h4>
+<h4>Aperturas con mancuernas</h4>
 </div>
 
 <div class="card" onclick="playVideo('IODxDxX7oi4')">
 <img src="https://img.youtube.com/vi/IODxDxX7oi4/0.jpg">
-<h4>Fondos</h4>
+<h4>Fondos para pecho</h4>
 </div>
 
 <div class="card" onclick="playVideo('DbFgADa2PL8')">
@@ -294,13 +268,9 @@ font-weight:bold;
 
 </div>
 
-<button class="arrow right" onclick="scrollRow(this,300)">❯</button>
-
-</div>
-
 <h2 id="espalda">Espalda</h2>
 
-<div class="row">
+<div class="carousel">
 
 <div class="card" onclick="playVideo('eGo4IYlbE5g')">
 <img src="https://img.youtube.com/vi/eGo4IYlbE5g/0.jpg">
@@ -319,7 +289,7 @@ font-weight:bold;
 
 <div class="card" onclick="playVideo('pYcpY20QaE8')">
 <img src="https://img.youtube.com/vi/pYcpY20QaE8/0.jpg">
-<h4>Remo mancuerna</h4>
+<h4>Remo con mancuerna</h4>
 </div>
 
 </div>
@@ -330,7 +300,7 @@ font-weight:bold;
 
 <h2>Herramientas Fitness</h2>
 
-<div class="tool-box">
+<div class="tool">
 
 <h3>Generador de Rutina</h3>
 
@@ -343,13 +313,13 @@ font-weight:bold;
 
 </select>
 
-<button onclick="generarRutina()">Generar</button>
+<button onclick="generarRutina()">Generar Rutina</button>
 
 <p id="rutina"></p>
 
 </div>
 
-<div class="tool-box">
+<div class="tool">
 
 <h3>Calculadora de Proteína</h3>
 
@@ -365,12 +335,14 @@ font-weight:bold;
 
 <section class="cta">
 
-<h2>¿Necesitas una página web profesional?</h2>
+<h2>¿Quieres una página web profesional?</h2>
 
-<p>Pixel Forge Studio diseña páginas modernas optimizadas para ventas.</p>
+<p>Desarrollado por Pixel Forge Studio</p>
 
 <button onclick="document.getElementById('contacto').scrollIntoView()">
+
 Solicitar página web
+
 </button>
 
 </section>
@@ -381,9 +353,9 @@ Solicitar página web
 
 <form action="https://formsubmit.co/Gus.marquez2024@gmail.com" method="POST">
 
-<input type="text" name="nombre" placeholder="Nombre" required>
+<input type="text" name="nombre" placeholder="Nombre">
 
-<input type="email" name="correo" placeholder="Correo" required>
+<input type="email" name="correo" placeholder="Correo">
 
 <textarea name="mensaje" placeholder="Mensaje"></textarea>
 
@@ -395,7 +367,7 @@ Solicitar página web
 
 <footer>
 
-Diseñado por <span>Pixel Forge Studio</span> | Desarrollo Web Profesional
+Desarrollado por <span>Pixel Forge Studio</span>
 
 </footer>
 
@@ -403,7 +375,7 @@ Diseñado por <span>Pixel Forge Studio</span> | Desarrollo Web Profesional
 
 <span class="close" onclick="closeVideo()">✖</span>
 
-<iframe id="videoPlayer" frameborder="0" allowfullscreen></iframe>
+<iframe id="player" frameborder="0" allowfullscreen></iframe>
 
 </div>
 
@@ -412,23 +384,16 @@ Diseñado por <span>Pixel Forge Studio</span> | Desarrollo Web Profesional
 function playVideo(id){
 
 document.getElementById("modal").style.display="flex"
-document.getElementById("videoPlayer").src="https://www.youtube.com/embed/"+id
+
+document.getElementById("player").src="https://www.youtube.com/embed/"+id
 
 }
 
 function closeVideo(){
 
 document.getElementById("modal").style.display="none"
-document.getElementById("videoPlayer").src=""
 
-}
-
-function scrollRow(btn,amount){
-
-btn.parentElement.querySelector(".row").scrollBy({
-left:amount,
-behavior:"smooth"
-})
+document.getElementById("player").src=""
 
 }
 
@@ -441,8 +406,6 @@ let t=this.value.toLowerCase()
 if(t.includes("pecho")) location="#pecho"
 if(t.includes("espalda")) location="#espalda"
 if(t.includes("abdomen")) location="#abdomen"
-if(t.includes("biceps")) location="#biceps"
-if(t.includes("triceps")) location="#triceps"
 
 }
 
@@ -451,15 +414,19 @@ if(t.includes("triceps")) location="#triceps"
 function generarRutina(){
 
 let obj=document.getElementById("objetivo").value
+
 let r=document.getElementById("rutina")
 
-if(obj=="hipertrofia")
-r.innerText="Día 1 Pecho/Tríceps | Día 2 Espalda/Bíceps | Día 3 Pierna | Día 4 Hombros"
+if(obj==="hipertrofia")
 
-if(obj=="fuerza")
-r.innerText="Rutina 5x5 con sentadilla, press banca y peso muerto"
+r.innerText="Pecho/Tríceps - Espalda/Bíceps - Pierna - Hombros"
 
-if(obj=="principiante")
+if(obj==="fuerza")
+
+r.innerText="Sentadilla, Press Banca y Peso Muerto 5x5"
+
+if(obj==="principiante")
+
 r.innerText="Rutina Full Body 3 días por semana"
 
 }
@@ -471,6 +438,7 @@ let peso=document.getElementById("peso").value
 let gramos=peso*2
 
 document.getElementById("resultadoProteina").innerText=
+
 "Debes consumir aproximadamente "+gramos+"g de proteína diaria"
 
 }
