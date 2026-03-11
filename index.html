@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Biblioteca de Ejercicios</title>
+<title>Biblioteca de Ejercicios de Gimnasio</title>
 
 <style>
 
@@ -29,13 +29,13 @@ z-index:100;
 
 .logo{
 color:red;
-font-weight:bold;
 font-size:22px;
+font-weight:bold;
 }
 
 nav a{
 color:white;
-margin:0 15px;
+margin:0 12px;
 text-decoration:none;
 }
 
@@ -69,13 +69,18 @@ padding:12px;
 width:60%;
 max-width:400px;
 border:none;
-border-radius:5px;
+border-radius:6px;
+}
+
+.row-container{
+position:relative;
 }
 
 .row{
 display:flex;
 overflow-x:auto;
 gap:15px;
+scroll-behavior:smooth;
 }
 
 .card{
@@ -99,6 +104,20 @@ margin:10px;
 .card:hover{
 transform:scale(1.1);
 }
+
+.scroll-btn{
+position:absolute;
+top:40%;
+background:red;
+border:none;
+color:white;
+font-size:22px;
+cursor:pointer;
+padding:10px;
+}
+
+.left{left:-10px}
+.right{right:-10px}
 
 .modal{
 display:none;
@@ -125,6 +144,33 @@ font-size:30px;
 cursor:pointer;
 }
 
+form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+input, textarea, select{
+padding:10px;
+border:none;
+border-radius:5px;
+}
+
+button{
+padding:12px;
+background:red;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#cc0000;
+}
+
 footer{
 background:black;
 text-align:center;
@@ -139,38 +185,33 @@ padding:20px;
 
 <header>
 
-<div class="logo">Fitness Library</div>
+<div class="logo">Biblioteca de Ejercicios</div>
 
 <nav>
-
 <a href="#inicio">Inicio</a>
 <a href="#ejercicios">Ejercicios</a>
 <a href="#rutinas">Rutinas</a>
 <a href="#consejos">Consejos</a>
 <a href="#contacto">Contacto</a>
-
 </nav>
 
 </header>
 
-
 <section class="hero" id="inicio">
-
-<h1>Entrena inteligente y transforma tu cuerpo</h1>
-
+<h1>Transforma tu cuerpo con el entrenamiento correcto</h1>
 </section>
 
-
 <div class="search">
-
-<input type="text" id="searchInput" placeholder="Buscar ejercicio o músculo">
-
+<input type="text" id="buscador" placeholder="Buscar músculo y presionar Enter">
 </div>
-
 
 <section class="section" id="ejercicios">
 
-<h2>Pecho</h2>
+<h2 id="pecho">Pecho</h2>
+
+<div class="row-container">
+
+<button class="scroll-btn left" onclick="scrollRow(this,-300)">❮</button>
 
 <div class="row">
 
@@ -181,7 +222,7 @@ padding:20px;
 
 <div class="card" onclick="playVideo('VmB1G1K7v94')">
 <img src="https://img.youtube.com/vi/VmB1G1K7v94/0.jpg">
-<h4>Aperturas con mancuernas</h4>
+<h4>Aperturas</h4>
 </div>
 
 <div class="card" onclick="playVideo('IODxDxX7oi4')">
@@ -196,123 +237,75 @@ padding:20px;
 
 </div>
 
-
-<h2>Bíceps</h2>
-
-<div class="row">
-
-<div class="card" onclick="playVideo('ykJmrZ5v0Oo')">
-<img src="https://img.youtube.com/vi/ykJmrZ5v0Oo/0.jpg">
-<h4>Curl con barra</h4>
-</div>
-
-<div class="card" onclick="playVideo('kwG2ipFRgfo')">
-<img src="https://img.youtube.com/vi/kwG2ipFRgfo/0.jpg">
-<h4>Curl alterno</h4>
-</div>
-
-<div class="card" onclick="playVideo('av7-8igSXTs')">
-<img src="https://img.youtube.com/vi/av7-8igSXTs/0.jpg">
-<h4>Curl martillo</h4>
-</div>
-
-<div class="card" onclick="playVideo('ykJmrZ5v0Oo')">
-<img src="https://img.youtube.com/vi/ykJmrZ5v0Oo/0.jpg">
-<h4>Curl concentrado</h4>
-</div>
-
-</div>
-
-
-<h2>Espalda</h2>
-
-<div class="row">
-
-<div class="card" onclick="playVideo('eGo4IYlbE5g')">
-<img src="https://img.youtube.com/vi/eGo4IYlbE5g/0.jpg">
-<h4>Dominadas</h4>
-</div>
-
-<div class="card" onclick="playVideo('roCP6wCXPqo')">
-<img src="https://img.youtube.com/vi/roCP6wCXPqo/0.jpg">
-<h4>Remo con barra</h4>
-</div>
-
-<div class="card" onclick="playVideo('vT2GjY_Umpw')">
-<img src="https://img.youtube.com/vi/vT2GjY_Umpw/0.jpg">
-<h4>Pull down</h4>
-</div>
-
-<div class="card" onclick="playVideo('pYcpY20QaE8')">
-<img src="https://img.youtube.com/vi/pYcpY20QaE8/0.jpg">
-<h4>Remo mancuerna</h4>
-</div>
-
-</div>
-
-
-<h2>Tren inferior</h2>
-
-<div class="row">
-
-<div class="card" onclick="playVideo('aclHkVaku9U')">
-<img src="https://img.youtube.com/vi/aclHkVaku9U/0.jpg">
-<h4>Sentadilla</h4>
-</div>
-
-<div class="card" onclick="playVideo('IZxyjW7MPJQ')">
-<img src="https://img.youtube.com/vi/IZxyjW7MPJQ/0.jpg">
-<h4>Peso muerto</h4>
-</div>
-
-<div class="card" onclick="playVideo('YyvSfVjQeL0')">
-<img src="https://img.youtube.com/vi/YyvSfVjQeL0/0.jpg">
-<h4>Prensa</h4>
-</div>
-
-<div class="card" onclick="playVideo('QOVaHwm-Q6U')">
-<img src="https://img.youtube.com/vi/QOVaHwm-Q6U/0.jpg">
-<h4>Zancadas</h4>
-</div>
+<button class="scroll-btn right" onclick="scrollRow(this,300)">❯</button>
 
 </div>
 
 </section>
-
 
 <section class="section" id="rutinas">
 
-<h2>Rutinas</h2>
+<h2>Generador de Rutinas</h2>
 
-<p>Rutina de hipertrofia, fuerza y principiantes.</p>
+<select id="objetivo">
+
+<option value="">Selecciona objetivo</option>
+<option value="hipertrofia">Hipertrofia</option>
+<option value="fuerza">Fuerza</option>
+<option value="principiante">Principiante</option>
+
+</select>
+
+<button onclick="generarRutina()">Generar rutina</button>
+
+<p id="resultadoRutina"></p>
 
 </section>
 
+<section class="section">
+
+<h2>Calculadora de Proteína</h2>
+
+<input type="number" id="peso" placeholder="Tu peso en kg">
+
+<button onclick="calcularProteina()">Calcular</button>
+
+<p id="proteinaResultado"></p>
+
+</section>
 
 <section class="section" id="consejos">
 
-<h2>Consejos</h2>
+<h2>Consejos Fitness</h2>
 
-<p>Descansa, consume proteína suficiente y entrena con técnica correcta.</p>
+<p>Entrena con técnica correcta, duerme al menos 7 horas y consume proteína suficiente.</p>
 
 </section>
-
 
 <section class="section" id="contacto">
 
 <h2>Contacto</h2>
 
-<p>Email: fitness@email.com</p>
+<form action="https://formsubmit.co/Gus.marquez2024@gmail.com" method="POST">
+
+<input type="text" name="nombre" placeholder="Tu nombre" required>
+
+<input type="email" name="correo" placeholder="Tu correo" required>
+
+<textarea name="mensaje" placeholder="Tu mensaje"></textarea>
+
+<button type="submit">Enviar mensaje</button>
+
+</form>
 
 </section>
 
-
 <footer>
 
-<p>Fitness Library</p>
+<p>Biblioteca de Ejercicios de Gimnasio</p>
+<p>Entrena con constancia y disciplina</p>
 
 </footer>
-
 
 <div class="modal" id="videoModal">
 
@@ -322,41 +315,85 @@ padding:20px;
 
 </div>
 
-
 <script>
 
 function playVideo(id){
 
 document.getElementById("videoModal").style.display="flex"
-
-document.getElementById("player").src=
-"https://www.youtube.com/embed/"+id
+document.getElementById("player").src="https://www.youtube.com/embed/"+id
 
 }
 
 function closeVideo(){
 
 document.getElementById("videoModal").style.display="none"
-
 document.getElementById("player").src=""
 
 }
 
-document.getElementById("searchInput").addEventListener("keyup",function(){
+function scrollRow(btn,amount){
 
-let filter=this.value.toLowerCase()
+btn.parentElement.querySelector(".row").scrollBy({
+left:amount,
+behavior:"smooth"
+})
 
-let cards=document.querySelectorAll(".card")
+}
 
-cards.forEach(card=>{
+document.getElementById("buscador").addEventListener("keypress",function(e){
 
-let text=card.innerText.toLowerCase()
+if(e.key==="Enter"){
 
-card.style.display=text.includes(filter)?"block":"none"
+let texto=this.value.toLowerCase()
+
+if(texto.includes("pecho")) location.href="#pecho"
+if(texto.includes("espalda")) location.href="#espalda"
+if(texto.includes("hombro")) location.href="#hombros"
+if(texto.includes("bíceps")||texto.includes("biceps")) location.href="#biceps"
+if(texto.includes("tríceps")||texto.includes("triceps")) location.href="#triceps"
+if(texto.includes("glúteos")||texto.includes("gluteos")) location.href="#gluteos"
+if(texto.includes("abdomen")) location.href="#abdomen"
+
+}
 
 })
 
-})
+function generarRutina(){
+
+let objetivo=document.getElementById("objetivo").value
+
+let resultado=document.getElementById("resultadoRutina")
+
+if(objetivo==="hipertrofia"){
+
+resultado.innerText="Rutina: Pecho-Tríceps / Espalda-Bíceps / Pierna / Hombros"
+
+}
+
+if(objetivo==="fuerza"){
+
+resultado.innerText="Rutina: Sentadilla, Press banca y Peso muerto 5x5"
+
+}
+
+if(objetivo==="principiante"){
+
+resultado.innerText="Rutina Full Body 3 días por semana"
+
+}
+
+}
+
+function calcularProteina(){
+
+let peso=document.getElementById("peso").value
+
+let proteina=peso*2
+
+document.getElementById("proteinaResultado").innerText=
+"Debes consumir aproximadamente "+proteina+" gramos de proteína al día"
+
+}
 
 </script>
 
